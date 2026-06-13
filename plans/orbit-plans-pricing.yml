@@ -1,0 +1,43 @@
+name: Orbit Plans and Pricing
+description: Pricing plans for the Orbit community intelligence and developer relations platform. Orbit was acquired by Postman in April 2024 and its community features are being integrated into the Postman API Network.
+specificationVersion: '0.1'
+url: https://orbit.love/pricing
+plans:
+  - name: Starter
+    description: Entry-level plan for small developer communities and individual DevRel practitioners getting started with community analytics.
+    url: https://orbit.love/pricing
+    features:
+      - Member tracking and activity feeds
+      - Community analytics dashboard
+      - GitHub, Twitter, Discord integrations
+      - Basic member profiles and enrichment
+      - REST API access
+      - Up to 1 workspace
+  - name: Growth
+    description: Mid-tier plan for growing developer communities needing deeper analytics, more integrations, and team collaboration features.
+    url: https://orbit.love/pricing
+    features:
+      - Everything in Starter
+      - Advanced community analytics and reporting
+      - Expanded integrations (Slack, LinkedIn, Discourse, Reddit, Stack Overflow, DEV)
+      - Team collaboration and multiple users
+      - Webhooks support
+      - Custom member segments and filters
+      - API with higher request limits
+      - Tag-based member management
+  - name: Enterprise
+    description: Enterprise plan for large organizations requiring SSO, advanced security, custom integrations, dedicated support, and enterprise-grade SLAs.
+    url: https://orbit.love/pricing
+    features:
+      - Everything in Growth
+      - Single Sign-On (SSO)
+      - Two-factor authentication (2FA)
+      - Workspace API tokens (not tied to individual users)
+      - Revokable API tokens
+      - Advanced security controls
+      - Custom integrations
+      - Dedicated customer success manager
+      - SLA guarantees
+      - Priority support
+      - Custom reporting and data export
+      - Multiple workspaces

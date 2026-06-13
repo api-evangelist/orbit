@@ -1,0 +1,72 @@
+name: Orbit
+description: Developer relations and community intelligence platform with a REST API for tracking member activities, measuring community growth, and managing developer advocates and contributors. Orbit was acquired by Postman in April 2024.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/orbit/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Developer Relations
+  - Community Intelligence
+  - DevRel
+  - Community Management
+  - Member Tracking
+  - Community Analytics
+  - Open Source
+  - Developer Engagement
+apis:
+  - name: Orbit REST API
+    description: The Orbit REST API provides programmatic access to community data, allowing teams to add members and activities from any source, pull enriched data from their workspace, and view underlying data from Orbit reports. The API supports member management, activity tracking, workspace insights, webhooks, and identity management.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://orbit.love/developers
+    baseURL: https://app.orbit.love/api/v1
+    tags:
+      - Community Management
+      - Members
+      - Activities
+      - DevRel
+      - Analytics
+    properties:
+      - type: Documentation
+        url: https://docs.orbit.love/docs
+      - type: OpenAPI
+        url: https://app.orbit.love/api-docs/v1/swagger.json
+      - type: Authentication
+        url: https://docs.orbit.love/docs/api-tokens
+      - type: Webhooks
+        url: https://docs.orbit.love/docs/webhooks
+      - type: GitHubRepository
+        url: https://github.com/orbit-love/ruby-orbit-members
+      - type: GitHubRepository
+        url: https://github.com/orbit-love/ruby-orbit-activities
+    contact:
+      - FN: Orbit Support
+        url: https://orbit.love/
+        email: ''
+common:
+  - type: Website
+    url: https://orbit.love/
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: GitHubOrg
+    url: https://github.com/orbit-love
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/orbitco
+  - type: X
+    url: https://x.com/OrbitModel
+  - type: Blog
+    url: https://orbit.love/blog
+  - type: Pricing
+    url: https://orbit.love/pricing
+  - type: StatusPage
+    url: https://status.orbit.love/
+  - type: Plans
+    url: plans/orbit-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/orbit-rate-limits.yml
+  - type: FinOps
+    url: finops/orbit-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+aid: orbit

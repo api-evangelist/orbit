@@ -1,0 +1,54 @@
+name: Orbit FinOps
+description: FinOps Framework FOCUS-aligned cost and usage analysis for the Orbit community intelligence platform. Orbit was acquired by Postman in April 2024; organizations should account for potential migration to Postman's community features going forward.
+specificationVersion: '1.0'
+url: https://orbit.love/pricing
+framework: FinOps Framework 1.0
+focus:
+  schema: FOCUS 1.0
+  description: Financial and operational cost dimensions for Orbit platform usage aligned with the FinOps FOCUS specification.
+costDimensions:
+  - name: SubscriptionFee
+    description: Recurring monthly or annual subscription fee based on selected plan (Starter, Growth, or Enterprise). Annual billing typically offers a discount versus monthly billing.
+    billingModel: subscription
+    cadence: monthly or annual
+    category: SaaS License
+  - name: WorkspaceUsage
+    description: Cost associated with the number of active workspaces provisioned under the account. Enterprise plans may support multiple workspaces at additional cost.
+    billingModel: per-unit
+    unit: workspace
+    category: Usage
+  - name: MemberVolume
+    description: Community member counts tracked within Orbit workspaces. Higher member volumes may require plan upgrades or Enterprise negotiation.
+    billingModel: tiered
+    unit: community members
+    category: Usage
+  - name: APIUsage
+    description: Cost implications of REST API consumption for custom integrations, data imports, and third-party connectors. High-volume API usage may require Enterprise plan.
+    billingModel: included (within plan limits)
+    category: API
+  - name: IntegrationConnectors
+    description: Number of platform integrations enabled (GitHub, Twitter/X, Discord, Slack, LinkedIn, Discourse, Reddit, Stack Overflow, DEV). More integrations may require higher-tier plans.
+    billingModel: feature-gated
+    category: Integration
+optimization:
+  - name: Annual vs Monthly Billing
+    description: Switching from monthly to annual billing typically reduces total cost by 15-20%. Evaluate commitment based on team size stability and budget cycles.
+    action: Commit to annual plan if usage is predictable
+  - name: Member Data Hygiene
+    description: Regularly audit and archive inactive community members to stay within plan limits and avoid unnecessary tier upgrades.
+    action: Review and prune inactive members quarterly
+  - name: Workspace Consolidation
+    description: Consolidate multiple Orbit workspaces where possible to reduce per-workspace costs on Enterprise plans.
+    action: Audit workspace utilization and consolidate where appropriate
+  - name: API Token Management
+    description: Use workspace-level API tokens rather than user tokens for all integrations to prevent disruption and simplify cost attribution.
+    action: Audit and migrate to workspace API tokens
+  - name: Postman Acquisition Migration Planning
+    description: Since Postman acquired Orbit in April 2024, organizations should evaluate the migration roadmap to Postman API Network community features and plan for potential licensing cost changes.
+    action: Monitor Postman communications about Orbit feature migration and plan budget accordingly
+tags:
+  - DevRel
+  - Community Management
+  - SaaS
+  - API Platform
+  - Postman

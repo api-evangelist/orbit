@@ -1,0 +1,28 @@
+name: Orbit API Rate Limits
+description: Rate limiting details for the Orbit REST API. The API uses token-based authentication with per-workspace API tokens. Workspace API tokens are not tied to individual users, allowing integrations to remain stable when team members leave.
+specificationVersion: '0.1'
+url: https://docs.orbit.love/docs
+authentication:
+  type: Bearer Token
+  description: The Orbit API uses API key authentication. Tokens are passed as Bearer tokens in the Authorization header or as a query parameter. Workspace API tokens can be created and revoked by workspace admins.
+  header: Authorization
+  scheme: Bearer
+  tokenUrl: https://app.orbit.love/
+limits:
+  - name: Default API Rate Limit
+    description: Standard rate limit applied to all API requests per workspace per token. The exact rate limit values are enforced server-side and communicated via standard HTTP response headers.
+    scope: workspace
+    headers:
+      - name: X-RateLimit-Limit
+        description: The maximum number of requests allowed per time window
+      - name: X-RateLimit-Remaining
+        description: The number of requests remaining in the current time window
+      - name: X-RateLimit-Reset
+        description: Unix timestamp when the rate limit window resets
+    handling:
+      httpStatus: 429
+      description: When the rate limit is exceeded, the API returns HTTP 429 Too Many Requests. Clients should implement exponential backoff and retry after the reset time indicated in the response headers.
+notes:
+  - Workspace API tokens are preferred over user-level tokens for integrations as they are not invalidated when a user leaves the workspace
+  - API tokens can be immediately revoked by workspace admins to end third-party data sharing
+  - For high-volume integrations, contact Orbit support to discuss limit increases on Enterprise plans
