@@ -1,0 +1,115 @@
+{
+  "data": [
+    {
+      "id": "VlEsOe",
+      "type": "spec_activity",
+      "attributes": {
+        "action": "spec_action",
+        "created_at": "2023-06-21T14:54:11.610Z",
+        "key": "cl\u00e9",
+        "occurred_at": "2023-06-21T14:54:11.609Z",
+        "updated_at": "2023-06-21T14:54:11.610Z",
+        "type": "SpecActivity",
+        "properties": {
+          "prop_1": "value_1",
+          "prop_2": "value_2"
+        },
+        "tags": [
+          "spec-tag-1",
+          "spec-tag-2"
+        ],
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/parishuelphd/activities/VlEsOe",
+        "weight": "1.0"
+      },
+      "relationships": {
+        "activity_type": {
+          "data": {
+            "id": "oQQsBb",
+            "type": "activity_type"
+          }
+        },
+        "member": {
+          "data": {
+            "id": "BloSvr",
+            "type": "member"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "oQQsBb",
+      "type": "activity_type",
+      "attributes": {
+        "name": "opine Mysource 34",
+        "short_name": "Spec Channel",
+        "key": "spec:activity",
+        "channel": "mysource",
+        "source": "mysource",
+        "weight": "1.0"
+      }
+    },
+    {
+      "id": "BloSvr",
+      "type": "member",
+      "attributes": {
+        "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+        "bio": null,
+        "birthday": null,
+        "company": null,
+        "title": null,
+        "created_at": "2023-06-21T14:54:11.551Z",
+        "deleted_at": null,
+        "location": null,
+        "name": "DelphaLegros",
+        "pronouns": null,
+        "reach": 0,
+        "shipping_address": null,
+        "slug": "delphalegros",
+        "source": "installation",
+        "tag_list": [],
+        "tags": [],
+        "teammate": false,
+        "tshirt": null,
+        "updated_at": "2023-06-21T14:54:11.551Z",
+        "merged_at": null,
+        "url": null,
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/parishuelphd/members/delphalegros",
+        "created": false,
+        "id": "BloSvr",
+        "orbit_level": null,
+        "love": null,
+        "first_activity_occurred_at": null,
+        "last_activity_occurred_at": null,
+        "activities_count": 0,
+        "activities_score": 0,
+        "twitter": null,
+        "github": null,
+        "discourse": null,
+        "email": null,
+        "devto": null,
+        "linkedin": null,
+        "discord": null,
+        "github_followers": null,
+        "twitter_followers": null,
+        "topics": null,
+        "languages": null
+      },
+      "relationships": {
+        "identities": {
+          "data": []
+        },
+        "organizations": {
+          "data": []
+        }
+      }
+    }
+  ],
+  "links": {
+    "first": "/parishuelphd/members/delphalegros/activities?page=1&direction=DESC&items=10&sort=occurred_at&activity_type=spec%3Aactivity&type=",
+    "last": "/parishuelphd/members/delphalegros/activities?page=1&direction=DESC&items=10&sort=occurred_at&activity_type=spec%3Aactivity&type=",
+    "prev": null,
+    "next": null
+  }
+}

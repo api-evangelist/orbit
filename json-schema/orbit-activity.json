@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orbit.love/schemas/activity.json",
+  "title": "Custom Activity",
+  "description": "Orbit activity schema",
+  "type": "object",
+  "properties": {
+    "description": {
+      "type": "string",
+      "description": "A description of the activity; displayed in the timeline"
+    },
+    "link": {
+      "type": "string",
+      "description": "A URL for the activity; displayed in the timeline"
+    },
+    "link_text": {
+      "type": "string",
+      "description": "The text for the timeline link"
+    },
+    "title": {
+      "type": "string",
+      "description": "A title for the activity; displayed in the timeline"
+    },
+    "weight": {
+      "type": "string",
+      "description": "A custom weight to be used in filters and reports; defaults to 1."
+    },
+    "activity_type": {
+      "type": "string",
+      "description": "The type of activity - what action was done by the member. This is a legacy field, use activity_type_key instead."
+    },
+    "activity_type_key": {
+      "type": "string",
+      "description": "The key for a custom activity type for the workspace. Will create a new activity type if it does not exist."
+    },
+    "key": {
+      "type": "string",
+      "description": "Supply a key that must be unique or leave blank to have one generated."
+    },
+    "occurred_at": {
+      "type": "string",
+      "description": "The date and time the activity occurred; defaults to now"
+    },
+    "properties": {
+      "type": "object",
+      "description": "Key-value pairs to provide contextual metadata about an activity."
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

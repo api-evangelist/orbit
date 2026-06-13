@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orbit.love/schemas/post_activity.json",
+  "title": "Content Activity",
+  "description": "Orbit post_activity schema",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "The url representing the post"
+    },
+    "occurred_at": {
+      "type": "string",
+      "description": "The date and time at which the content was published; defaults to now"
+    },
+    "activity_type": {
+      "type": "string",
+      "enum": [
+        "content"
+      ]
+    }
+  },
+  "required": [
+    "url",
+    "activity_type"
+  ]
+}

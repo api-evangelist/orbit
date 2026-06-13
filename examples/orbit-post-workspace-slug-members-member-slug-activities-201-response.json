@@ -1,0 +1,129 @@
+{
+  "data": {
+    "id": "ZngsdG",
+    "type": "custom_activity",
+    "attributes": {
+      "action": "happened",
+      "created_at": "2023-06-21T14:54:12.696Z",
+      "key": "thing-123",
+      "occurred_at": "2023-06-21T14:54:12.693Z",
+      "updated_at": "2023-06-21T14:54:12.696Z",
+      "type": "CustomActivity",
+      "properties": {},
+      "tags": [
+        "product",
+        "enterprise",
+        "channel:custom",
+        "custom_type:custom-type",
+        "custom_title:did-a-thing"
+      ],
+      "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/mrcamerontowne/activities/ZngsdG",
+      "weight": "8.0",
+      "custom_description": "More info about the thing",
+      "custom_link": "http://web.archive.org/web/20240303060821/http://link.com/",
+      "custom_link_text": "See the thing",
+      "custom_title": "Did a thing",
+      "custom_type": "custom-type",
+      "custom_context": null,
+      "body": "More info about the thing"
+    },
+    "relationships": {
+      "activity_type": {
+        "data": {
+          "id": "574seD",
+          "type": "activity_type"
+        }
+      },
+      "member": {
+        "data": {
+          "id": "45PSyv",
+          "type": "member"
+        }
+      },
+      "user": {
+        "data": {
+          "id": "l6pF69",
+          "type": "user"
+        }
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "574seD",
+      "type": "activity_type",
+      "attributes": {
+        "name": "Something happened",
+        "short_name": "Custom",
+        "key": "custom:happened",
+        "channel": "custom",
+        "source": "custom",
+        "weight": "1.0"
+      }
+    },
+    {
+      "id": "45PSyv",
+      "type": "member",
+      "attributes": {
+        "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+        "bio": null,
+        "birthday": null,
+        "company": null,
+        "title": null,
+        "created_at": "2023-06-21T14:54:12.664Z",
+        "deleted_at": null,
+        "location": null,
+        "name": "MrCharoletteLegros",
+        "pronouns": null,
+        "reach": 0,
+        "shipping_address": null,
+        "slug": "mrcharolettelegros",
+        "source": "installation",
+        "tag_list": [],
+        "tags": [],
+        "teammate": false,
+        "tshirt": null,
+        "updated_at": "2023-06-21T14:54:12.664Z",
+        "merged_at": null,
+        "url": null,
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/mrcamerontowne/members/mrcharolettelegros",
+        "created": false,
+        "id": "45PSyv",
+        "orbit_level": null,
+        "love": null,
+        "first_activity_occurred_at": null,
+        "last_activity_occurred_at": null,
+        "activities_count": 0,
+        "activities_score": 0,
+        "twitter": null,
+        "github": null,
+        "discourse": null,
+        "email": null,
+        "devto": null,
+        "linkedin": null,
+        "discord": null,
+        "github_followers": null,
+        "twitter_followers": null,
+        "topics": null,
+        "languages": null
+      },
+      "relationships": {
+        "identities": {
+          "data": []
+        },
+        "organizations": {
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "l6pF69",
+      "type": "user",
+      "attributes": {
+        "name": "VerniaOberbrunner",
+        "updated_at": "2023-06-21T14:54:12.681Z",
+        "created_at": "2023-06-21T14:54:12.675Z"
+      }
+    }
+  ]
+}

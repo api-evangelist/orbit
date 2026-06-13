@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orbit.love/schemas/post_activity_with_member.json",
+  "title": "Content Activity",
+  "description": "Orbit post_activity_with_member schema",
+  "allOf": [
+    {
+      "$ref": "#/components/schemas/post_activity"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "member": {
+          "$ref": "#/components/schemas/member"
+        }
+      }
+    }
+  ]
+}

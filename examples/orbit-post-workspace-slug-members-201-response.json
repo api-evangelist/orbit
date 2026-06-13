@@ -1,0 +1,125 @@
+{
+  "data": {
+    "id": "40mSvV",
+    "type": "member",
+    "attributes": {
+      "avatar_url": "http://web.archive.org/web/20240303060821/https://avatars2.githubusercontent.com/u/174777?u=79e423dd07c19122115f52a1c97727ca193e6253&v=4",
+      "bio": "Co-founder & CTO @orbit-love \u00b7 Developer Advocate \u00b7 formerly @algolia and @keen",
+      "birthday": null,
+      "company": "Orbit",
+      "title": null,
+      "created_at": "2023-06-21T14:54:25.770Z",
+      "deleted_at": null,
+      "location": "Paris",
+      "name": "Josh Dzielak",
+      "pronouns": null,
+      "reach": 8,
+      "shipping_address": null,
+      "slug": "dzello",
+      "source": "api",
+      "tag_list": [
+        "one",
+        "two"
+      ],
+      "tags": [
+        "one",
+        "two"
+      ],
+      "teammate": false,
+      "tshirt": null,
+      "updated_at": "2023-06-21T14:54:25.848Z",
+      "merged_at": null,
+      "url": "http://web.archive.org/web/20240303060821/https://dzello.com/",
+      "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/msvirgilkoss/members/dzello",
+      "created": true,
+      "id": "40mSvV",
+      "orbit_level": null,
+      "love": null,
+      "first_activity_occurred_at": null,
+      "last_activity_occurred_at": null,
+      "activities_count": 0,
+      "activities_score": 0,
+      "twitter": "dzello",
+      "github": "dzello",
+      "discourse": null,
+      "email": "josh@orbit.love",
+      "devto": null,
+      "linkedin": null,
+      "discord": null,
+      "github_followers": 171,
+      "twitter_followers": null,
+      "topics": null,
+      "languages": null
+    },
+    "relationships": {
+      "identities": {
+        "data": [
+          {
+            "id": "1ADTwV",
+            "type": "github_identity"
+          },
+          {
+            "id": "3RgTbZ",
+            "type": "twitter_identity"
+          },
+          {
+            "id": "3YETyv",
+            "type": "email_identity"
+          }
+        ]
+      },
+      "organizations": {
+        "data": [
+          {
+            "id": "n9WF2V",
+            "type": "organization"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "1ADTwV",
+      "type": "github_identity",
+      "attributes": {
+        "uid": "174777",
+        "email": null,
+        "username": "dzello",
+        "name": "Josh Dzielak",
+        "source": "github",
+        "source_host": "github.com",
+        "profile_url": "http://web.archive.org/web/20240303060821/https://github.com/dzello",
+        "url": null
+      }
+    },
+    {
+      "id": "3RgTbZ",
+      "type": "twitter_identity",
+      "attributes": {
+        "uid": null,
+        "email": null,
+        "username": "dzello",
+        "name": null,
+        "source": "twitter",
+        "source_host": "twitter.com",
+        "profile_url": "http://web.archive.org/web/20240303060821/https://twitter.com/dzello",
+        "url": null
+      }
+    },
+    {
+      "id": "3YETyv",
+      "type": "email_identity",
+      "attributes": {
+        "uid": "josh@orbit.love",
+        "email": "josh@orbit.love",
+        "username": null,
+        "name": "josh",
+        "source": "email",
+        "source_host": "email.host",
+        "profile_url": "mailto:josh@orbit.love",
+        "url": null
+      }
+    }
+  ]
+}

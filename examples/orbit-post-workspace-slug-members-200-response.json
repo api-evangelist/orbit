@@ -1,0 +1,120 @@
+{
+  "data": {
+    "id": "4ndS8E",
+    "type": "member",
+    "attributes": {
+      "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+      "bio": null,
+      "birthday": null,
+      "company": null,
+      "title": null,
+      "created_at": "2023-06-21T14:54:26.095Z",
+      "deleted_at": null,
+      "location": null,
+      "name": "LissetteMoen",
+      "pronouns": null,
+      "reach": 0,
+      "shipping_address": null,
+      "slug": "lissettemoen",
+      "source": "installation",
+      "tag_list": [
+        "one",
+        "two"
+      ],
+      "tags": [
+        "one",
+        "two"
+      ],
+      "teammate": false,
+      "tshirt": null,
+      "updated_at": "2023-06-21T14:54:26.173Z",
+      "merged_at": null,
+      "url": null,
+      "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/gerrywalkersr/members/lissettemoen",
+      "created": false,
+      "id": "4ndS8E",
+      "orbit_level": null,
+      "love": null,
+      "first_activity_occurred_at": null,
+      "last_activity_occurred_at": null,
+      "activities_count": 0,
+      "activities_score": 0,
+      "twitter": "dzello",
+      "github": "dzello",
+      "discourse": null,
+      "email": "dzello@orbit.love",
+      "devto": null,
+      "linkedin": null,
+      "discord": null,
+      "github_followers": null,
+      "twitter_followers": null,
+      "topics": null,
+      "languages": null
+    },
+    "relationships": {
+      "identities": {
+        "data": [
+          {
+            "id": "5ENTeK",
+            "type": "github_identity"
+          },
+          {
+            "id": "nZRTEp",
+            "type": "twitter_identity"
+          },
+          {
+            "id": "nqaT7d",
+            "type": "email_identity"
+          }
+        ]
+      },
+      "organizations": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "5ENTeK",
+      "type": "github_identity",
+      "attributes": {
+        "uid": "uid-72",
+        "email": null,
+        "username": "dzello",
+        "name": null,
+        "source": "github",
+        "source_host": "github.com",
+        "profile_url": "http://web.archive.org/web/20240303060821/https://github.com/dzello",
+        "url": null
+      }
+    },
+    {
+      "id": "nZRTEp",
+      "type": "twitter_identity",
+      "attributes": {
+        "uid": null,
+        "email": null,
+        "username": "dzello",
+        "name": null,
+        "source": "twitter",
+        "source_host": "twitter.com",
+        "profile_url": "http://web.archive.org/web/20240303060821/https://twitter.com/dzello",
+        "url": null
+      }
+    },
+    {
+      "id": "nqaT7d",
+      "type": "email_identity",
+      "attributes": {
+        "uid": "dzello@orbit.love",
+        "email": "dzello@orbit.love",
+        "username": null,
+        "name": "dzello",
+        "source": "email",
+        "source_host": "email.host",
+        "profile_url": "mailto:dzello@orbit.love",
+        "url": null
+      }
+    }
+  ]
+}

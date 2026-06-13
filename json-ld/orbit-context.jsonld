@@ -1,0 +1,176 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "orbit": "https://orbit.love/vocab/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "Workspace": "orbit:Workspace",
+    "Member": "orbit:Member",
+    "Activity": "orbit:Activity",
+    "ActivityType": "orbit:ActivityType",
+    "Identity": "orbit:Identity",
+    "Organization": "orbit:Organization",
+    "Note": "orbit:Note",
+    "Webhook": "orbit:Webhook",
+    "WebhookSubscription": "orbit:WebhookSubscription",
+    "Alert": "orbit:Alert",
+    "Destination": "orbit:Destination",
+    "Report": "orbit:Report",
+
+    "workspace_slug": {
+      "@id": "orbit:workspaceSlug",
+      "@type": "xsd:string"
+    },
+    "member_slug": {
+      "@id": "orbit:memberSlug",
+      "@type": "xsd:string"
+    },
+    "organization_id": {
+      "@id": "orbit:organizationId",
+      "@type": "xsd:string"
+    },
+    "orbit_level": {
+      "@id": "orbit:orbitLevel",
+      "@type": "xsd:integer"
+    },
+    "reach": {
+      "@id": "orbit:reach",
+      "@type": "xsd:integer"
+    },
+    "love": {
+      "@id": "orbit:love",
+      "@type": "xsd:decimal"
+    },
+    "teammate": {
+      "@id": "orbit:teammate",
+      "@type": "xsd:boolean"
+    },
+    "tags": {
+      "@id": "orbit:tags",
+      "@container": "@set"
+    },
+    "activities": {
+      "@id": "orbit:activities",
+      "@container": "@set"
+    },
+    "identities": {
+      "@id": "orbit:identities",
+      "@container": "@set"
+    },
+    "activity_type": {
+      "@id": "orbit:activityType",
+      "@type": "@id"
+    },
+    "activity_link": {
+      "@id": "orbit:activityLink",
+      "@type": "@id"
+    },
+    "occurred_at": {
+      "@id": "orbit:occurredAt",
+      "@type": "xsd:dateTime"
+    },
+    "custom_description": {
+      "@id": "orbit:customDescription",
+      "@type": "xsd:string"
+    },
+    "key": {
+      "@id": "orbit:key",
+      "@type": "xsd:string"
+    },
+    "source": {
+      "@id": "orbit:source",
+      "@type": "xsd:string"
+    },
+    "source_host": {
+      "@id": "orbit:sourceHost",
+      "@type": "xsd:string"
+    },
+    "username": {
+      "@id": "orbit:username",
+      "@type": "xsd:string"
+    },
+    "uid": {
+      "@id": "orbit:uid",
+      "@type": "xsd:string"
+    },
+    "event_type": {
+      "@id": "orbit:eventType",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "description": {
+      "@id": "schema:description"
+    },
+    "email": {
+      "@id": "schema:email"
+    },
+    "url": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "avatar_url": {
+      "@id": "schema:image",
+      "@type": "@id"
+    },
+    "location": {
+      "@id": "schema:addressLocality"
+    },
+    "bio": {
+      "@id": "schema:description"
+    },
+    "twitter": {
+      "@id": "orbit:twitterUsername",
+      "@type": "xsd:string"
+    },
+    "github": {
+      "@id": "orbit:githubUsername",
+      "@type": "xsd:string"
+    },
+    "linkedin": {
+      "@id": "orbit:linkedinUsername",
+      "@type": "xsd:string"
+    },
+    "discord": {
+      "@id": "orbit:discordUsername",
+      "@type": "xsd:string"
+    },
+    "created_at": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "updated_at": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "members": {
+      "@id": "orbit:members",
+      "@container": "@set"
+    },
+    "organizations": {
+      "@id": "orbit:organizations",
+      "@container": "@set"
+    },
+    "webhooks": {
+      "@id": "orbit:webhooks",
+      "@container": "@set"
+    },
+    "notes": {
+      "@id": "orbit:notes",
+      "@container": "@set"
+    },
+    "body": {
+      "@id": "orbit:noteBody",
+      "@type": "xsd:string"
+    },
+    "destination": {
+      "@id": "orbit:destination",
+      "@type": "@id"
+    },
+    "alert": {
+      "@id": "orbit:alert"
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "data": {
+    "id": "PvetbL",
+    "type": "workspace",
+    "attributes": {
+      "name": "Fake Workspace",
+      "slug": "fake-workspace",
+      "updated_at": "2023-06-21T14:54:46.807Z",
+      "created_at": "2023-06-21T14:54:46.662Z",
+      "members_count": 4,
+      "activities_count": 1,
+      "tags": {},
+      "orbit_level_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 2
+      }
+    },
+    "relationships": {
+      "last_member": {
+        "data": {
+          "id": "jMNSnV",
+          "type": "member"
+        }
+      },
+      "last_activity": {
+        "data": {
+          "id": "ZPosrL",
+          "type": "pull_request_activity"
+        }
+      },
+      "repositories": {
+        "data": []
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "jMNSnV",
+      "type": "member",
+      "attributes": {
+        "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+        "bio": null,
+        "birthday": null,
+        "company": null,
+        "title": null,
+        "created_at": "2023-06-21T14:54:46.781Z",
+        "deleted_at": null,
+        "location": null,
+        "name": "LurlineGreenfelder",
+        "pronouns": null,
+        "reach": 0,
+        "shipping_address": null,
+        "slug": "lurlinegreenfelder",
+        "source": "installation",
+        "tag_list": [],
+        "tags": [],
+        "teammate": false,
+        "tshirt": null,
+        "updated_at": "2023-06-21T14:54:46.781Z",
+        "merged_at": null,
+        "url": null,
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/fake-workspace/members/lurlinegreenfelder",
+        "created": false,
+        "id": "jMNSnV",
+        "orbit_level": 4,
+        "love": null,
+        "first_activity_occurred_at": null,
+        "last_activity_occurred_at": null,
+        "activities_count": 0,
+        "activities_score": 0,
+        "twitter": null,
+        "github": null,
+        "discourse": null,
+        "email": null,
+        "devto": null,
+        "linkedin": null,
+        "discord": null,
+        "github_followers": null,
+        "twitter_followers": null,
+        "topics": null,
+        "languages": null
+      },
+      "relationships": {
+        "identities": {
+          "data": []
+        },
+        "organizations": {
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "ZPosrL",
+      "type": "pull_request_activity",
+      "attributes": {
+        "action": "opened",
+        "created_at": "2023-06-21T14:54:46.735Z",
+        "key": "raleighturner/denny#75",
+        "occurred_at": "2023-06-21T14:54:46.723Z",
+        "updated_at": "2023-06-21T14:54:46.735Z",
+        "type": "PullRequestActivity",
+        "properties": {
+          "github_repository": "raleighturner/denny",
+          "github_organization": "raleighturner",
+          "github_pull_request": "raleighturner/denny/#75"
+        },
+        "tags": [
+          "channel:github",
+          "github_organization:raleighturner",
+          "github_repository:raleighturner/denny",
+          "github_pull_request:raleighturner/denny/#75"
+        ],
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/fake-workspace/activities/ZPosrL",
+        "weight": "1.0",
+        "activity_link": "http://web.archive.org/web/20240303060821/https://github.com/",
+        "g_title": "Here is some new code",
+        "g_number": 75,
+        "g_html_url": "http://web.archive.org/web/20240303060821/https://github.com/",
+        "g_created_at": "2023-06-21T15:54:46.723+01:00",
+        "is_pull_request": null,
+        "g_merged": false,
+        "g_merged_at": null,
+        "g_merged_by": null
+      },
+      "relationships": {
+        "activity_type": {
+          "data": {
+            "id": "oWVsm9",
+            "type": "activity_type"
+          }
+        },
+        "member": {
+          "data": {
+            "id": "jL5SZA",
+            "type": "member"
+          }
+        },
+        "repository": {
+          "data": {
+            "id": "6eeTk6",
+            "type": "repository"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orbit.love/schemas/custom_or_post_activity.json",
+  "title": "Custom Or Post Activity",
+  "description": "Orbit custom_or_post_activity schema",
+  "oneOf": [
+    {
+      "$ref": "#/components/schemas/activity"
+    },
+    {
+      "$ref": "#/components/schemas/post_activity"
+    }
+  ]
+}

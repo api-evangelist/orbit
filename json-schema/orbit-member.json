@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orbit.love/schemas/member.json",
+  "title": "Member",
+  "description": "Orbit member schema",
+  "type": "object",
+  "properties": {
+    "bio": {
+      "type": "string"
+    },
+    "birthday": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pronouns": {
+      "type": "string"
+    },
+    "shipping_address": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "tags_to_add": {
+      "type": "string",
+      "description": "Adds tags to member; comma-separated string or array"
+    },
+    "tags": {
+      "type": "string",
+      "description": "Replaces all tags for the member; comma-separated string or array"
+    },
+    "tag_list": {
+      "type": "string",
+      "description": "Deprecated: Please use the tags attribute instead"
+    },
+    "tshirt": {
+      "type": "string"
+    },
+    "teammate": {
+      "type": "boolean"
+    },
+    "url": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string",
+      "description": "The member's GitHub username"
+    },
+    "twitter": {
+      "type": "string",
+      "description": "The member's Twitter username"
+    },
+    "email": {
+      "type": "string",
+      "description": "The member's email"
+    },
+    "linkedin": {
+      "type": "string",
+      "description": "The member's LinkedIn username, without the in/ or pub/"
+    },
+    "devto": {
+      "type": "string",
+      "description": "The member's DEV username"
+    }
+  }
+}

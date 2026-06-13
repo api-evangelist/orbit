@@ -1,0 +1,16 @@
+{
+  "data": {
+    "id": "1adTJn",
+    "type": "other_identity",
+    "attributes": {
+      "uid": "12345",
+      "email": "josh@orbit.love",
+      "username": "dzello1",
+      "name": "Josh",
+      "source": "twitch",
+      "source_host": "twitch.tv",
+      "profile_url": null,
+      "url": "http://web.archive.org/web/20240303060821/https://twitch.tv/dzello1"
+    }
+  }
+}

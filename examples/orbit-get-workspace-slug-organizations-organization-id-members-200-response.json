@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": "jPESdn",
+      "type": "member",
+      "attributes": {
+        "id": "jPESdn",
+        "slug": "jane-smith",
+        "name": "Jane Smith",
+        "last_activity_occurred_at": null,
+        "activities_score": 0
+      },
+      "relationships": {}
+    },
+    {
+      "id": "jYbS8E",
+      "type": "member",
+      "attributes": {
+        "id": "jYbS8E",
+        "slug": "john-doe",
+        "name": "John Doe",
+        "last_activity_occurred_at": null,
+        "activities_score": 0
+      },
+      "relationships": {}
+    }
+  ],
+  "links": {
+    "first": "/mrfernjohns/organizations/BqkFkv/members?page=1&items=10",
+    "last": "/mrfernjohns/organizations/BqkFkv/members?page=1&items=10",
+    "prev": null,
+    "next": null
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "data": [
+    {
+      "id": "jaPSJy",
+      "type": "member",
+      "attributes": {
+        "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+        "bio": null,
+        "birthday": null,
+        "company": "PuraRutherford",
+        "title": null,
+        "created_at": "2023-06-21T14:54:15.875Z",
+        "deleted_at": null,
+        "location": null,
+        "name": "Sally",
+        "pronouns": null,
+        "reach": 0,
+        "shipping_address": null,
+        "slug": "sally",
+        "source": "installation",
+        "tag_list": [
+          "ruby"
+        ],
+        "tags": [
+          "ruby"
+        ],
+        "teammate": false,
+        "tshirt": null,
+        "updated_at": "2023-06-21T14:54:15.883Z",
+        "merged_at": null,
+        "url": null,
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/herschelmosciskidvm/members/sally",
+        "created": false,
+        "id": "jaPSJy",
+        "orbit_level": null,
+        "love": null,
+        "first_activity_occurred_at": "2023-06-19T14:54:15.967Z",
+        "last_activity_occurred_at": "2023-06-21T13:54:15.993Z",
+        "activities_count": 2,
+        "activities_score": 2.0,
+        "twitter": null,
+        "github": null,
+        "discourse": null,
+        "email": null,
+        "devto": null,
+        "linkedin": null,
+        "discord": null,
+        "github_followers": null,
+        "twitter_followers": null,
+        "topics": null,
+        "languages": null
+      },
+      "relationships": {
+        "identities": {
+          "data": [
+            {
+              "id": "5geTxn",
+              "type": "spec_identity"
+            }
+          ]
+        },
+        "organizations": {
+          "data": [
+            {
+              "id": "aWQFAB",
+              "type": "organization"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4EzSdZ",
+      "type": "member",
+      "attributes": {
+        "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+        "bio": null,
+        "birthday": null,
+        "company": null,
+        "title": null,
+        "created_at": "2023-06-21T14:54:15.858Z",
+        "deleted_at": null,
+        "location": null,
+        "name": "Josh",
+        "pronouns": null,
+        "reach": 0,
+        "shipping_address": null,
+        "slug": "josh",
+        "source": "installation",
+        "tag_list": [
+          "ruby"
+        ],
+        "tags": [
+          "ruby"
+        ],
+        "teammate": false,
+        "tshirt": null,
+        "updated_at": "2023-06-21T14:54:15.866Z",
+        "merged_at": null,
+        "url": null,
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/herschelmosciskidvm/members/josh",
+        "created": false,
+        "id": "4EzSdZ",
+        "orbit_level": null,
+        "love": null,
+        "first_activity_occurred_at": "2023-06-13T14:54:15.945Z",
+        "last_activity_occurred_at": "2023-06-17T14:54:15.888Z",
+        "activities_count": 3,
+        "activities_score": 3.0,
+        "twitter": null,
+        "github": null,
+        "discourse": null,
+        "email": null,
+        "devto": null,
+        "linkedin": null,
+        "discord": null,
+        "github_followers": null,
+        "twitter_followers": null,
+        "topics": null,
+        "languages": null
+      },
+      "relationships": {
+        "identities": {
+          "data": [
+            {
+              "id": "nbWTe1",
+              "type": "spec_identity"
+            }
+          ]
+        },
+        "organizations": {
+          "data": []
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "43",
+      "type": "spec_identity"
+    },
+    {
+      "id": "aWQFAB",
+      "type": "organization",
+      "attributes": {
+        "id": "aWQFAB",
+        "name": "PuraRutherford",
+        "website": "example-1.com",
+        "logo_url": null,
+        "members_count": 1,
+        "employees_count": null,
+        "organization_type": null,
+        "industry": null,
+        "estimated_annual_revenue": null,
+        "founded_in": null,
+        "location": null,
+        "twitter": null,
+        "twitter_followers": null,
+        "facebook": null,
+        "facebook_followers": null,
+        "linkedin": null,
+        "crunchbase": null,
+        "email_addresses": null,
+        "last_active": null,
+        "active_since": null,
+        "created_at": "2023-06-21T14:54:16.047Z",
+        "updated_at": "2023-06-21T14:54:16.047Z",
+        "lifecycle_stage": null,
+        "deal_closed_date": null,
+        "price_plan": null,
+        "crm_uid": null,
+        "crm_url": null,
+        "owner_name": null,
+        "owner_email": null,
+        "source": null
+      }
+    },
+    {
+      "id": "42",
+      "type": "spec_identity"
+    }
+  ],
+  "links": {
+    "first": "http://web.archive.org/web/20240303060821/http://localhost:3000/api/v1/herschelmosciskidvm/members?activities_count_max=99&activities_count_min=1&activity_type=type%3Anew%2Cspec%3Aactivity&affiliation=&cities%5B%5D=&company%5B%5D=&countries%5B%5D=&direction=DESC&end_date=&identity=&items=10&member_tags=ruby%7Crails%2C-go&orbit=&page=1&query=&regions%5B%5D=&relative=&sort=last_activity&start_date=&title%5B%5D=&workspace=herschelmosciskidvm",
+    "prev": null,
+    "next": null
+  }
+}

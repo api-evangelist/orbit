@@ -1,0 +1,61 @@
+{
+  "data": {
+    "id": "1XOtmn",
+    "type": "statistics",
+    "attributes": {
+      "workspace_id": "1XOtmn",
+      "timeframe": {
+        "start_date": "2023-05-22",
+        "end_date": "2023-06-21",
+        "start_date_last": "2023-04-21",
+        "end_date_last": "2023-05-21"
+      },
+      "overview": {
+        "total_members_count": 1,
+        "members_on_orbit_level_1_count": 0,
+        "members_on_orbit_level_2_count": 0,
+        "members_on_orbit_level_3_count": 0,
+        "members_on_orbit_level_4_count": 0,
+        "members_on_orbit_level_none_count": 1
+      },
+      "members": {
+        "active_count": 1,
+        "active_delta": 0,
+        "new_count": 1,
+        "new_delta": 0,
+        "returning_count": 0,
+        "returning_delta": 0
+      },
+      "activities": {
+        "total_count": 1,
+        "total_delta": 0,
+        "spec:activity": {
+          "source": "mysource",
+          "count": 1,
+          "delta": 0,
+          "members": {
+            "active_count": 1,
+            "active_delta": 0,
+            "new_count": 1,
+            "new_delta": 0,
+            "returning_count": 0,
+            "returning_delta": 0
+          }
+        },
+        "foo:activity": {
+          "source": "mysource",
+          "count": 0,
+          "delta": 0,
+          "members": {
+            "active_count": 0,
+            "active_delta": 0,
+            "new_count": 0,
+            "new_delta": 0,
+            "returning_count": 0,
+            "returning_delta": 0
+          }
+        }
+      }
+    }
+  }
+}

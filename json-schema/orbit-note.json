@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orbit.love/schemas/note.json",
+  "title": "Note",
+  "description": "Orbit note schema",
+  "type": "object",
+  "properties": {
+    "body": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "body"
+  ]
+}

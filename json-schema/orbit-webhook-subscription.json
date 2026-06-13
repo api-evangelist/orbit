@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orbit.love/schemas/webhook_subscription.json",
+  "title": "Webhook Subscription",
+  "description": "Orbit webhook_subscription schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "secret": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "activity_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "activity_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "member_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "event_type",
+    "url"
+  ]
+}

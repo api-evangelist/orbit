@@ -1,0 +1,286 @@
+{
+  "data": [
+    {
+      "id": "63rsLp",
+      "type": "issue_activity",
+      "attributes": {
+        "action": "opened",
+        "created_at": "2023-06-21T14:54:04.584Z",
+        "key": "wayne/collene#55",
+        "occurred_at": "2023-06-21T14:54:04.579Z",
+        "updated_at": "2023-06-21T14:54:04.584Z",
+        "type": "IssueActivity",
+        "properties": {
+          "github_issue": "wayne/collene/#55",
+          "github_repository": "wayne/collene",
+          "github_organization": "wayne"
+        },
+        "tags": [
+          "channel:github",
+          "github_organization:wayne",
+          "github_repository:wayne/collene",
+          "github_issue:wayne/collene/#55"
+        ],
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/avelinawiza/activities/63rsLp",
+        "weight": "1.0",
+        "activity_link": "http://web.archive.org/web/20240303060821/https://github.com/",
+        "g_title": "Cool issue title!",
+        "g_number": 55,
+        "g_html_url": "http://web.archive.org/web/20240303060821/https://github.com/",
+        "g_created_at": "2023-06-21T15:54:04.579+01:00",
+        "is_pull_request": null
+      },
+      "relationships": {
+        "activity_type": {
+          "data": {
+            "id": "la4sVD",
+            "type": "activity_type"
+          }
+        },
+        "member": {
+          "data": {
+            "id": "By3S5j",
+            "type": "member"
+          }
+        },
+        "repository": {
+          "data": {
+            "id": "jP8TMj",
+            "type": "repository"
+          }
+        }
+      }
+    },
+    {
+      "id": "V5YsvV",
+      "type": "pull_request_activity",
+      "attributes": {
+        "action": "opened",
+        "created_at": "2023-06-21T14:54:04.524Z",
+        "key": "jason/hermine#72",
+        "occurred_at": "2023-06-21T14:54:04.508Z",
+        "updated_at": "2023-06-21T14:54:04.524Z",
+        "type": "PullRequestActivity",
+        "properties": {
+          "github_repository": "jason/hermine",
+          "github_organization": "jason",
+          "github_pull_request": "jason/hermine/#72"
+        },
+        "tags": [
+          "channel:github",
+          "github_organization:jason",
+          "github_repository:jason/hermine",
+          "github_pull_request:jason/hermine/#72"
+        ],
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/avelinawiza/activities/V5YsvV",
+        "weight": "1.0",
+        "activity_link": "http://web.archive.org/web/20240303060821/https://github.com/",
+        "g_title": "Cool PR title!",
+        "g_number": 72,
+        "g_html_url": "http://web.archive.org/web/20240303060821/https://github.com/",
+        "g_created_at": "2023-06-21T15:54:04.508+01:00",
+        "is_pull_request": null,
+        "g_merged": true,
+        "g_merged_at": null,
+        "g_merged_by": null
+      },
+      "relationships": {
+        "activity_type": {
+          "data": {
+            "id": "lnrs0l",
+            "type": "activity_type"
+          }
+        },
+        "member": {
+          "data": {
+            "id": "By3S5j",
+            "type": "member"
+          }
+        },
+        "repository": {
+          "data": {
+            "id": "6l3Tz9",
+            "type": "repository"
+          }
+        }
+      }
+    },
+    {
+      "id": "6a4sBp",
+      "type": "spec_activity",
+      "attributes": {
+        "action": "spec_action",
+        "created_at": "2023-06-21T14:54:04.438Z",
+        "key": "cl\u00e9",
+        "occurred_at": "2023-06-21T14:54:04.437Z",
+        "updated_at": "2023-06-21T14:54:04.438Z",
+        "type": "SpecActivity",
+        "properties": {
+          "prop_1": "value_1",
+          "prop_2": "value_2"
+        },
+        "tags": [
+          "spec-tag-1",
+          "spec-tag-2"
+        ],
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/avelinawiza/activities/6a4sBp",
+        "weight": "1.0"
+      },
+      "relationships": {
+        "activity_type": {
+          "data": {
+            "id": "D2Esq5",
+            "type": "activity_type"
+          }
+        },
+        "member": {
+          "data": {
+            "id": "By3S5j",
+            "type": "member"
+          }
+        },
+        "repository": {
+          "data": {
+            "id": "jBlTg9",
+            "type": "repository"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "la4sVD",
+      "type": "activity_type",
+      "attributes": {
+        "name": "Opened an issue",
+        "short_name": "Issue opened",
+        "key": "issues:opened",
+        "channel": "github",
+        "source": "github",
+        "weight": "6.0"
+      }
+    },
+    {
+      "id": "By3S5j",
+      "type": "member",
+      "attributes": {
+        "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+        "bio": null,
+        "birthday": null,
+        "company": null,
+        "title": null,
+        "created_at": "2023-06-21T14:54:04.391Z",
+        "deleted_at": null,
+        "location": null,
+        "name": "JolineLang",
+        "pronouns": null,
+        "reach": 0,
+        "shipping_address": null,
+        "slug": "jolinelang",
+        "source": "installation",
+        "tag_list": [
+          "ruby"
+        ],
+        "tags": [
+          "ruby"
+        ],
+        "teammate": false,
+        "tshirt": null,
+        "updated_at": "2023-06-21T14:54:04.391Z",
+        "merged_at": null,
+        "url": null,
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/avelinawiza/members/jolinelang",
+        "created": false,
+        "id": "By3S5j",
+        "orbit_level": null,
+        "love": null,
+        "first_activity_occurred_at": null,
+        "last_activity_occurred_at": null,
+        "activities_count": 0,
+        "activities_score": 0,
+        "twitter": null,
+        "github": null,
+        "discourse": null,
+        "email": null,
+        "devto": null,
+        "linkedin": null,
+        "discord": null,
+        "github_followers": null,
+        "twitter_followers": null,
+        "topics": null,
+        "languages": null
+      },
+      "relationships": {
+        "identities": {
+          "data": []
+        },
+        "organizations": {
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "jP8TMj",
+      "type": "repository",
+      "attributes": {
+        "owner": "see",
+        "name": "tyrell",
+        "full_name": "see/tyrell",
+        "updated_at": "2023-06-21T14:54:04.577Z",
+        "created_at": "2023-06-21T14:54:04.577Z"
+      }
+    },
+    {
+      "id": "lnrs0l",
+      "type": "activity_type",
+      "attributes": {
+        "name": "persuade Mysource 3",
+        "short_name": "Spec Channel",
+        "key": "spec:happened:1",
+        "channel": "mysource",
+        "source": "mysource",
+        "weight": "1.0"
+      }
+    },
+    {
+      "id": "6l3Tz9",
+      "type": "repository",
+      "attributes": {
+        "owner": "andreasbernier",
+        "name": "timmybatz",
+        "full_name": "andreasbernier/timmybatz",
+        "updated_at": "2023-06-21T14:54:04.496Z",
+        "created_at": "2023-06-21T14:54:04.496Z"
+      }
+    },
+    {
+      "id": "D2Esq5",
+      "type": "activity_type",
+      "attributes": {
+        "name": "qualify Mysource 2",
+        "short_name": "Spec Channel",
+        "key": "spec_activity_type_key",
+        "channel": "mysource",
+        "source": "mysource",
+        "weight": "1.0"
+      }
+    },
+    {
+      "id": "jBlTg9",
+      "type": "repository",
+      "attributes": {
+        "owner": "randolph",
+        "name": "bruna",
+        "full_name": "orbit-love/orbit-model",
+        "updated_at": "2023-06-21T14:54:04.419Z",
+        "created_at": "2023-06-21T14:54:04.419Z"
+      }
+    }
+  ],
+  "links": {
+    "first": "http://web.archive.org/web/20240303060821/http://localhost:3000/api/v1/avelinawiza/activities?activity_type=&affiliation=&cities%5B%5D=&company%5B%5D=&countries%5B%5D=&direction=DESC&end_date=&filters=true&identity=&items=10&member_tags=&orbit=&page=1&regions%5B%5D=&relative=&sort=occurred_at&start_date=&title%5B%5D=&workspace=avelinawiza",
+    "prev": null,
+    "next": null
+  }
+}

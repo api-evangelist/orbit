@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": "o5Nf2J",
+      "type": "note",
+      "attributes": {
+        "id": "o5Nf2J",
+        "created_at": "2023-06-21T14:54:15.417Z",
+        "body": "heyo",
+        "updated_at": "2023-06-21T14:54:15.417Z"
+      },
+      "relationships": {
+        "member": {
+          "data": {
+            "id": "jPESm8",
+            "type": "member"
+          }
+        },
+        "user": {
+          "data": {
+            "id": "lqAFn8",
+            "type": "user"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "jPESm8",
+      "type": "member",
+      "attributes": {
+        "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+        "bio": null,
+        "birthday": null,
+        "company": null,
+        "title": null,
+        "created_at": "2023-06-21T14:54:15.397Z",
+        "deleted_at": null,
+        "location": null,
+        "name": "MsKirkKemmer",
+        "pronouns": null,
+        "reach": 0,
+        "shipping_address": null,
+        "slug": "mskirkkemmer",
+        "source": "installation",
+        "tag_list": [],
+        "tags": [],
+        "teammate": false,
+        "tshirt": null,
+        "updated_at": "2023-06-21T14:54:15.397Z",
+        "merged_at": null,
+        "url": null,
+        "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/mariahturner/members/mskirkkemmer",
+        "created": false,
+        "id": "jPESm8",
+        "orbit_level": null,
+        "love": null,
+        "first_activity_occurred_at": null,
+        "last_activity_occurred_at": null,
+        "activities_count": 0,
+        "activities_score": 0,
+        "twitter": null,
+        "github": null,
+        "discourse": null,
+        "email": null,
+        "devto": null,
+        "linkedin": null,
+        "discord": null,
+        "github_followers": null,
+        "twitter_followers": null,
+        "topics": null,
+        "languages": null
+      },
+      "relationships": {
+        "identities": {
+          "data": []
+        },
+        "organizations": {
+          "data": []
+        }
+      }
+    },
+    {
+      "id": "lqAFn8",
+      "type": "user",
+      "attributes": {
+        "name": "TristanBreitenberg",
+        "updated_at": "2023-06-21T14:54:15.415Z",
+        "created_at": "2023-06-21T14:54:15.409Z"
+      }
+    }
+  ],
+  "links": {
+    "first": "/mariahturner/members/mskirkkemmer/notes?page=1",
+    "last": "/mariahturner/members/mskirkkemmer/notes?page=1",
+    "prev": null,
+    "next": null
+  }
+}

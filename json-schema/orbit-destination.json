@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orbit.love/schemas/destination.json",
+  "title": "Destination",
+  "description": "Orbit destination schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "alerts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/alert"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "url"
+  ]
+}

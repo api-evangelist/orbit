@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "id": "6qyFL6",
+      "type": "webhook",
+      "attributes": {
+        "name": "My Test Webhook",
+        "enabled": true,
+        "updated_at": "2023-06-21T14:54:45.434Z",
+        "created_at": "2023-06-21T14:54:45.434Z",
+        "event_type": "activity:created",
+        "url": "http://web.archive.org/web/20240303060821/https://example.com/hook",
+        "activity_types": [],
+        "activity_tags": [],
+        "member_tags": [],
+        "activity_keywords": [],
+        "include_teammates": false
+      }
+    }
+  ],
+  "links": {
+    "first": "/fake-workspace/webhooks?page=1",
+    "last": "/fake-workspace/webhooks?page=1",
+    "prev": null,
+    "next": null
+  }
+}

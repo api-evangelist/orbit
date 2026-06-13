@@ -1,0 +1,172 @@
+vocabulary:
+  name: Orbit API Vocabulary
+  description: Domain vocabulary for the Orbit developer relations and community intelligence platform REST API.
+  version: v1
+  source: https://app.orbit.love/api-docs/v1/swagger.json
+  terms:
+
+    # Core Entities
+    - term: workspace
+      label: Workspace
+      description: An Orbit workspace representing a community or organization's community data container. Identified by a workspace_slug.
+      type: entity
+
+    - term: workspace_slug
+      label: Workspace Slug
+      description: A URL-safe identifier string for an Orbit workspace, used as the primary path parameter in API routes.
+      type: property
+
+    - term: member
+      label: Member
+      description: A person who is part of a community tracked in Orbit. Members have activities, identities, notes, and enriched profile data.
+      type: entity
+
+    - term: member_slug
+      label: Member Slug
+      description: A URL-safe identifier for a specific member within a workspace.
+      type: property
+
+    - term: activity
+      label: Activity
+      description: An action or event performed by a member, such as opening a GitHub issue, posting to Discord, or attending an event. Activities are the core engagement signals tracked in Orbit.
+      type: entity
+
+    - term: activity_type
+      label: Activity Type
+      description: A categorization of an activity, such as github:issue_opened, discord:message_created, or custom activity types defined by the workspace.
+      type: entity
+
+    - term: identity
+      label: Identity
+      description: An external account or profile linked to a member, such as a GitHub username, Twitter handle, or email address. Members can have multiple identities across platforms.
+      type: entity
+
+    - term: organization
+      label: Organization
+      description: A company or group that one or more members are associated with in Orbit. Organizations group members for reporting and outreach.
+      type: entity
+
+    - term: organization_id
+      label: Organization ID
+      description: A unique numeric or string identifier for an organization within an Orbit workspace.
+      type: property
+
+    - term: note
+      label: Note
+      description: A text annotation attached to a member record, used by DevRel teams to track qualitative context, outreach history, or member status.
+      type: entity
+
+    - term: webhook
+      label: Webhook
+      description: A configured HTTP callback that Orbit calls when specific events occur in a workspace, enabling real-time integrations.
+      type: entity
+
+    - term: webhook_subscription
+      label: Webhook Subscription
+      description: A subscription record defining the URL, event types, and status of a webhook configured for a workspace.
+      type: entity
+
+    - term: report
+      label: Report
+      description: An aggregated analytics view of workspace community data, such as member growth, activity trends, or engagement scores.
+      type: entity
+
+    # Member Properties
+    - term: orbit_level
+      label: Orbit Level
+      description: A numeric score (1-4) reflecting a member's engagement depth in the community. Level 1 is the most engaged; level 4 is the least.
+      type: property
+
+    - term: reach
+      label: Reach
+      description: A measure of a member's influence or network size, derived from their follower counts and public profiles.
+      type: property
+
+    - term: love
+      label: Love
+      description: An engagement metric representing the member's overall positive participation in the community, computed from their activity history.
+      type: property
+
+    - term: teammate
+      label: Teammate
+      description: A boolean or flag indicating whether a member is an internal team member (employee or core contributor) rather than an external community participant.
+      type: property
+
+    - term: tags
+      label: Tags
+      description: User-defined labels applied to a member for segmentation, filtering, and reporting in Orbit.
+      type: property
+
+    # Activity Properties
+    - term: activity_link
+      label: Activity Link
+      description: A URL pointing to the original source of an activity (e.g., the GitHub issue URL or Discord message link).
+      type: property
+
+    - term: occurred_at
+      label: Occurred At
+      description: An ISO 8601 timestamp indicating when the activity took place.
+      type: property
+
+    - term: custom_description
+      label: Custom Description
+      description: A human-readable description of a custom activity, used when the activity type does not have a system-generated description.
+      type: property
+
+    - term: key
+      label: Activity Key
+      description: A unique identifier for an activity within a given activity type, used to prevent duplicate activity creation via upsert.
+      type: property
+
+    # Identity Properties
+    - term: source
+      label: Identity Source
+      description: The platform or service that an identity comes from, such as github, twitter, linkedin, or email.
+      type: property
+
+    - term: source_host
+      label: Source Host
+      description: The hostname of the platform that an identity or activity comes from, used for custom source integrations.
+      type: property
+
+    - term: username
+      label: Username
+      description: The platform-specific username or handle for a member identity (e.g., GitHub login, Twitter handle).
+      type: property
+
+    - term: uid
+      label: UID
+      description: A platform-specific unique identifier for a member identity, distinct from the username (e.g., a numeric user ID).
+      type: property
+
+    # Webhook Properties
+    - term: destination
+      label: Webhook Destination
+      description: The target URL and configuration for a webhook subscription, specifying where Orbit should POST event payloads.
+      type: entity
+
+    - term: alert
+      label: Webhook Alert
+      description: An event trigger definition for a webhook, specifying which Orbit events should fire the webhook callback.
+      type: entity
+
+    - term: event_type
+      label: Event Type
+      description: The category of event that triggers a webhook, such as member_created, activity_created, or member_reached_orbit_level.
+      type: property
+
+    # API Concepts
+    - term: orbit_level_change
+      label: Orbit Level Change
+      description: A webhook event triggered when a member's Orbit Level increases or decreases due to changes in their activity and engagement.
+      type: concept
+
+    - term: community_intelligence
+      label: Community Intelligence
+      description: The category of data and insights Orbit provides about developer and open source communities, including engagement trends, member journeys, and advocate identification.
+      type: concept
+
+    - term: developer_relations
+      label: Developer Relations
+      description: The field and practice of building relationships between companies and their developer communities, for which Orbit is a primary tooling platform.
+      type: concept

@@ -1,0 +1,119 @@
+{
+  "data": {
+    "id": "rRxS6X",
+    "type": "member",
+    "attributes": {
+      "avatar_url": "http://web.archive.org/web/20240303060821/http://github.com/avatar.png",
+      "bio": null,
+      "birthday": null,
+      "company": "orbit",
+      "title": null,
+      "created_at": "2023-06-21T14:54:36.087Z",
+      "deleted_at": null,
+      "location": null,
+      "name": "StanOConnerSr",
+      "pronouns": null,
+      "reach": 0,
+      "shipping_address": null,
+      "slug": "stanoconnersr",
+      "source": "installation",
+      "tag_list": [],
+      "tags": [],
+      "teammate": false,
+      "tshirt": null,
+      "updated_at": "2023-06-21T14:54:36.087Z",
+      "merged_at": null,
+      "url": null,
+      "orbit_url": "http://web.archive.org/web/20240303060821/http://localhost:3000/jonaslindmd/members/stanoconnersr",
+      "created": false,
+      "id": "rRxS6X",
+      "orbit_level": null,
+      "love": null,
+      "first_activity_occurred_at": null,
+      "last_activity_occurred_at": null,
+      "activities_count": 0,
+      "activities_score": 0,
+      "twitter": null,
+      "github": "dzello",
+      "discourse": null,
+      "email": null,
+      "devto": null,
+      "linkedin": null,
+      "discord": null,
+      "github_followers": null,
+      "twitter_followers": null,
+      "topics": null,
+      "languages": null
+    },
+    "relationships": {
+      "identities": {
+        "data": [
+          {
+            "id": "1JrTad",
+            "type": "github_identity"
+          }
+        ]
+      },
+      "organizations": {
+        "data": [
+          {
+            "id": "nb0FmD",
+            "type": "organization"
+          }
+        ]
+      }
+    }
+  },
+  "included": [
+    {
+      "id": "1JrTad",
+      "type": "github_identity",
+      "attributes": {
+        "uid": "uid-82",
+        "email": null,
+        "username": "dzello",
+        "name": null,
+        "source": "github",
+        "source_host": "github.com",
+        "profile_url": "http://web.archive.org/web/20240303060821/https://github.com/dzello",
+        "url": null
+      }
+    },
+    {
+      "id": "nb0FmD",
+      "type": "organization",
+      "attributes": {
+        "id": "nb0FmD",
+        "name": "orbit",
+        "website": "orbit.love",
+        "logo_url": null,
+        "members_count": 1,
+        "employees_count": null,
+        "organization_type": null,
+        "industry": null,
+        "estimated_annual_revenue": null,
+        "founded_in": null,
+        "location": null,
+        "twitter": null,
+        "twitter_followers": null,
+        "facebook": null,
+        "facebook_followers": null,
+        "linkedin": null,
+        "crunchbase": null,
+        "email_addresses": null,
+        "last_active": null,
+        "active_since": null,
+        "created_at": "2023-06-21T14:54:36.110Z",
+        "updated_at": "2023-06-21T14:54:36.110Z",
+        "lifecycle_stage": null,
+        "deal_closed_date": null,
+        "price_plan": null,
+        "crm_uid": null,
+        "crm_url": null,
+        "owner_name": null,
+        "owner_email": null,
+        "source": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": "5Gds1O",
+      "type": "activity_type",
+      "attributes": {
+        "name": "Created content",
+        "short_name": "Content created",
+        "key": "post:created",
+        "channel": "content",
+        "source": "content",
+        "weight": "1.0"
+      }
+    },
+    {
+      "id": "DOnsmL",
+      "type": "activity_type",
+      "attributes": {
+        "name": "Activated their account on product",
+        "short_name": "Activated account",
+        "key": "activated_account",
+        "channel": "product",
+        "source": "product",
+        "weight": "6.0"
+      }
+    }
+  ],
+  "links": {
+    "first": "/alejandrawehner/activity_types?page=1",
+    "last": "/alejandrawehner/activity_types?page=1",
+    "prev": null,
+    "next": null
+  }
+}

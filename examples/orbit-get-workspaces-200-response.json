@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "15Vt67",
+      "type": "workspace",
+      "attributes": {
+        "name": "Fake Workspace",
+        "slug": "fake-workspace",
+        "updated_at": "2023-06-21T14:54:46.429Z",
+        "created_at": "2023-06-21T14:54:46.423Z"
+      },
+      "relationships": {
+        "repositories": {
+          "data": []
+        }
+      }
+    }
+  ],
+  "included": []
+}
