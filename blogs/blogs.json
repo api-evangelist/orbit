@@ -2,13 +2,11 @@
   "repo": "orbit",
   "feeds": [
     {
-      "source": "https://x.com/OrbitModel",
-      "feed_url": "https://x.com/OrbitModel",
-      "title": "",
+      "source": "https://orbit.love/blog",
       "saved": 0,
-      "method": "none"
+      "error": "HTTP 530 origin unreachable (site defunct post-Postman acquisition)"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:59:22Z"
 }
