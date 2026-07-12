@@ -44,6 +44,10 @@ apis:
         url: https://orbit.love/
         email: ''
 common:
+  - type: DomainSecurity
+    url: security/orbit-domain-security.yml
+  - type: Authentication
+    url: authentication/orbit-authentication.yml
   - type: Website
     url: https://orbit.love/
   - type: Documentation

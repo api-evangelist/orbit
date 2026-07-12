@@ -1,0 +1,32 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: orbit.love
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 27 08:45:47 2026 GMT
+  hsts: null
+- host: app.orbit.love
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 27 08:45:47 2026 GMT
+  hsts: null
+- host: web.archive.org
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb  9 22:02:42 2027 GMT
+  hsts: false
+domains:
+- domain: orbit.love
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
+- domain: archive.org
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
