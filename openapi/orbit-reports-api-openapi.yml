@@ -1,0 +1,118 @@
+openapi: 3.0.1
+info:
+  title: Orbit Activities Reports API
+  version: v1
+  description: Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).
+servers:
+- url: http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1
+tags:
+- name: Reports
+paths:
+  /{workspace_slug}/reports:
+    get:
+      summary: Get a workspace stats
+      tags:
+      - Reports
+      security:
+      - bearer: []
+      parameters:
+      - name: workspace_slug
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: start_date
+        in: query
+        description: 'Filter activities after this date. Format: YYYY-MM-DD.'
+        schema:
+          type: string
+      - name: end_date
+        in: query
+        description: 'Filter activities before this date. Format: YYYY-MM-DD.'
+        schema:
+          type: string
+      - name: relative
+        in: query
+        description: 'Relative timeframes. Format: this_<integer>_<period>, with period in [days, weeks, months, years]. For example, this_30_days.'
+        schema:
+          type: string
+      - name: properties
+        in: query
+        schema:
+          type: string
+      - name: activity_type
+        in: query
+        schema:
+          type: string
+      - name: type
+        in: query
+        deprecated: true
+        description: Deprecated in favor of the activity_type parameter.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              example:
+                data:
+                  id: 1XOtmn
+                  type: statistics
+                  attributes:
+                    workspace_id: 1XOtmn
+                    timeframe:
+                      start_date: '2023-05-22'
+                      end_date: '2023-06-21'
+                      start_date_last: '2023-04-21'
+                      end_date_last: '2023-05-21'
+                    overview:
+                      total_members_count: 1
+                      members_on_orbit_level_1_count: 0
+                      members_on_orbit_level_2_count: 0
+                      members_on_orbit_level_3_count: 0
+                      members_on_orbit_level_4_count: 0
+                      members_on_orbit_level_none_count: 1
+                    members:
+                      active_count: 1
+                      active_delta: 0
+                      new_count: 1
+                      new_delta: 0
+                      returning_count: 0
+                      returning_delta: 0
+                    activities:
+                      total_count: 1
+                      total_delta: 0
+                      spec:activity:
+                        source: mysource
+                        count: 1
+                        delta: 0
+                        members:
+                          active_count: 1
+                          active_delta: 0
+                          new_count: 1
+                          new_delta: 0
+                          returning_count: 0
+                          returning_delta: 0
+                      foo:activity:
+                        source: mysource
+                        count: 0
+                        delta: 0
+                        members:
+                          active_count: 0
+                          active_delta: 0
+                          new_count: 0
+                          new_delta: 0
+                          returning_count: 0
+                          returning_delta: 0
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      description: Provide a Authorization header with format 'Bearer <api_key>'. This is the recommended approach. Make sure to include the 'Bearer' part in the text box here.
+    api_key:
+      type: apiKey
+      name: api_key
+      in: query
+      description: Provide the API key in a query param called api_key. This is the least secure method, please use only for testing.
