@@ -1,6 +1,19 @@
 name: Orbit
 description: Developer relations and community intelligence platform with a REST API for tracking member activities, measuring community growth, and managing developer advocates and contributors. Orbit was acquired by Postman in April 2024.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/orbit.png
 url: https://raw.githubusercontent.com/api-evangelist/orbit/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -15,34 +28,186 @@ tags:
   - Open Source
   - Developer Engagement
 apis:
-  - name: Orbit REST API
-    description: The Orbit REST API provides programmatic access to community data, allowing teams to add members and activities from any source, pull enriched data from their workspace, and view underlying data from Orbit reports. The API supports member management, activity tracking, workspace insights, webhooks, and identity management.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://orbit.love/developers
-    baseURL: https://app.orbit.love/api/v1
-    tags:
-      - Community Management
-      - Members
-      - Activities
-      - DevRel
-      - Analytics
-    properties:
-      - type: Documentation
-        url: https://docs.orbit.love/docs
-      - type: OpenAPI
-        url: https://app.orbit.love/api-docs/v1/swagger.json
-      - type: Authentication
-        url: https://docs.orbit.love/docs/api-tokens
-      - type: Webhooks
-        url: https://docs.orbit.love/docs/webhooks
-      - type: GitHubRepository
-        url: https://github.com/orbit-love/ruby-orbit-members
-      - type: GitHubRepository
-        url: https://github.com/orbit-love/ruby-orbit-activities
-    contact:
-      - FN: Orbit Support
-        url: https://orbit.love/
-        email: ''
+- aid: orbit:orbit-activities-api
+  name: Orbit Activities API
+  description: The Activities API from Orbit — 5 operation(s) for activities.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Activities
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-activities-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
+- aid: orbit:orbit-activity-types-api
+  name: Orbit Activity Types API
+  description: The Activity Types API from Orbit — 1 operation(s) for activity types.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Activity Types
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-activity-types-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
+- aid: orbit:orbit-members-api
+  name: Orbit Members API
+  description: The Members API from Orbit — 5 operation(s) for members.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Members
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-members-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
+- aid: orbit:orbit-notes-api
+  name: Orbit Notes API
+  description: The Notes API from Orbit — 2 operation(s) for notes.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Notes
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-notes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
+- aid: orbit:orbit-organizations-api
+  name: Orbit Organizations API
+  description: The Organizations API from Orbit — 2 operation(s) for organizations.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-organizations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
+- aid: orbit:orbit-reports-api
+  name: Orbit Reports API
+  description: The Reports API from Orbit — 1 operation(s) for reports.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-reports-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
+- aid: orbit:orbit-users-api
+  name: Orbit Users API
+  description: The Users API from Orbit — 1 operation(s) for users.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-users-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
+- aid: orbit:orbit-webhooks-api
+  name: Orbit Webhooks API
+  description: The Webhooks API from Orbit — 2 operation(s) for webhooks.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
+- aid: orbit:orbit-workspaces-api
+  name: Orbit Workspaces API
+  description: The Workspaces API from Orbit — 2 operation(s) for workspaces.
+  humanURL: https://orbit.love/developers
+  baseURL: https://app.orbit.love/api/v1
+  tags:
+  - Workspaces
+  properties:
+  - type: OpenAPI
+    url: openapi/orbit-workspaces-api-openapi.yml
+  - type: Documentation
+    url: https://docs.orbit.love/docs
+  - type: Authentication
+    url: https://docs.orbit.love/docs/api-tokens
+  - type: Webhooks
+    url: https://docs.orbit.love/docs/webhooks
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-members
+  - type: GitHubRepository
+    url: https://github.com/orbit-love/ruby-orbit-activities
 common:
   - type: AgenticAccess
     url: agentic-access/orbit-agentic-access.yml
