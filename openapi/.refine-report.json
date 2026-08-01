@@ -1,0 +1,30 @@
+{
+  "provider": "orbit",
+  "sources": [
+    "orbit-activities-api-openapi.yml",
+    "orbit-activity-types-api-openapi.yml",
+    "orbit-members-api-openapi.yml",
+    "orbit-notes-api-openapi.yml",
+    "orbit-organizations-api-openapi.yml",
+    "orbit-reports-api-openapi.yml",
+    "orbit-users-api-openapi.yml",
+    "orbit-webhooks-api-openapi.yml",
+    "orbit-workspaces-api-openapi.yml"
+  ],
+  "outputs": [
+    "orbit-activities-api-openapi.yml",
+    "orbit-activity-types-api-openapi.yml",
+    "orbit-members-api-openapi.yml",
+    "orbit-notes-api-openapi.yml",
+    "orbit-organizations-api-openapi.yml",
+    "orbit-reports-api-openapi.yml",
+    "orbit-users-api-openapi.yml",
+    "orbit-webhooks-api-openapi.yml",
+    "orbit-workspaces-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
