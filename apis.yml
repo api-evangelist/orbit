@@ -209,6 +209,9 @@ apis:
   - type: GitHubRepository
     url: https://github.com/orbit-love/ruby-orbit-activities
 common:
+  - type: License
+    name: MIT
+    url: https://github.com/orbit-love/ruby-orbit-members/blob/main/LICENSE
   - type: AgenticAccess
     url: agentic-access/orbit-agentic-access.yml
   - type: DomainSecurity
