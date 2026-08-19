@@ -1,0 +1,228 @@
+{
+  "item": [
+    {
+      "id": "dea56f4f-8574-47c0-bb92-6aac1c8080dc",
+      "name": "Workspaces",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8ea6cb2f-2788-4fa1-b450-1c63c7e1fa88",
+          "name": "Get all workspaces for the current user",
+          "request": {
+            "name": "Get all workspaces for the current user",
+            "description": {},
+            "url": {
+              "path": [
+                "workspaces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "077f2012-1dd6-47de-b70c-5ff62b111b02",
+              "name": "success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "workspaces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"15Vt67\",\n      \"type\": \"workspace\",\n      \"attributes\": {\n        \"name\": \"Fake Workspace\",\n        \"slug\": \"fake-workspace\",\n        \"updated_at\": \"2023-06-21T14:54:46.429Z\",\n        \"created_at\": \"2023-06-21T14:54:46.423Z\"\n      },\n      \"relationships\": {\n        \"repositories\": {\n          \"data\": []\n        }\n      }\n    }\n  ],\n  \"included\": []\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bcb3c475-f2ca-442d-a089-955e87cfbf88",
+          "name": "Get a workspace",
+          "request": {
+            "name": "Get a workspace",
+            "description": {},
+            "url": {
+              "path": [
+                "workspaces",
+                ":workspace_slug"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "include_orbit_level_counts",
+                  "value": "<boolean>",
+                  "description": "Include the number of members by Orbit Level in the attributes"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "24c49164-f47d-454f-b8dc-3a1e1fa89bb7",
+              "name": "success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "workspaces",
+                    ":workspace_slug"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include_orbit_level_counts",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"id\": \"PvetbL\",\n    \"type\": \"workspace\",\n    \"attributes\": {\n      \"name\": \"Fake Workspace\",\n      \"slug\": \"fake-workspace\",\n      \"updated_at\": \"2023-06-21T14:54:46.807Z\",\n      \"created_at\": \"2023-06-21T14:54:46.662Z\",\n      \"members_count\": 4,\n      \"activities_count\": 1,\n      \"tags\": {},\n      \"orbit_level_counts\": {\n        \"1\": 0,\n        \"2\": 0,\n        \"3\": 1,\n        \"4\": 2\n      }\n    },\n    \"relationships\": {\n      \"last_member\": {\n        \"data\": {\n          \"id\": \"jMNSnV\",\n          \"type\": \"member\"\n        }\n      },\n      \"last_activity\": {\n        \"data\": {\n          \"id\": \"ZPosrL\",\n          \"type\": \"pull_request_activity\"\n        }\n      },\n      \"repositories\": {\n        \"data\": []\n      }\n    }\n  },\n  \"included\": [\n    {\n      \"id\": \"jMNSnV\",\n      \"type\": \"member\",\n      \"attributes\": {\n        \"avatar_url\": \"http://web.archive.org/web/20240303060821/http://github.com/avatar.png\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"company\": null,\n        \"title\": null,\n        \"created_at\": \"2023-06-21T14:54:46.781Z\",\n        \"deleted_at\": null,\n        \"location\": null,\n        \"name\": \"LurlineGreenfelder\",\n        \"pronouns\": null,\n        \"reach\": 0,\n        \"shipping_address\": null,\n        \"slug\": \"lurlinegreenfelder\",\n        \"source\": \"installation\",\n        \"tag_list\": [],\n        \"tags\": [],\n        \"teammate\": false,\n        \"tshirt\": null,\n        \"updated_at\": \"2023-06-21T14:54:46.781Z\",\n        \"merged_at\": null,\n        \"url\": null,\n        \"orbit_url\": \"http://web.archive.org/web/20240303060821/http://localhost:3000/fake-workspace/members/lurlinegreenfelder\",\n        \"created\": false,\n        \"id\": \"jMNSnV\",\n        \"orbit_level\": 4,\n        \"love\": null,\n        \"first_activity_occurred_at\": null,\n        \"last_activity_occurred_at\": null,\n        \"activities_count\": 0,\n        \"activities_score\": 0,\n        \"twitter\": null,\n        \"github\": null,\n        \"discourse\": null,\n        \"email\": null,\n        \"devto\": null,\n        \"linkedin\": null,\n        \"discord\": null,\n        \"github_followers\": null,\n        \"twitter_followers\": null,\n        \"topics\": null,\n        \"languages\": null\n      },\n      \"relationships\": {\n        \"identities\": {\n          \"data\": []\n        },\n        \"organizations\": {\n          \"data\": []\n        }\n      }\n    },\n    {\n      \"id\": \"ZPosrL\",\n      \"type\": \"pull_request_activity\",\n      \"attributes\": {\n        \"action\": \"opened\",\n        \"created_at\": \"2023-06-21T14:54:46.735Z\",\n        \"key\": \"raleighturner/denny#75\",\n        \"occurred_at\": \"2023-06-21T14:54:46.723Z\",\n        \"updated_at\": \"2023-06-21T14:54:46.735Z\",\n        \"type\": \"PullRequestActivity\",\n        \"properties\": {\n          \"github_repository\": \"raleighturner/denny\",\n          \"github_organization\": \"raleighturner\",\n          \"github_pull_request\": \"raleighturner/denny/#75\"\n        },\n        \"tags\": [\n          \"channel:github\",\n          \"github_organization:raleighturner\",\n          \"github_repository:raleighturner/denny\",\n          \"github_pull_request:raleighturner/denny/#75\"\n        ],\n        \"orbit_url\": \"http://web.archive.org/web/20240303060821/http://localhost:3000/fake-workspace/activities/ZPosrL\",\n        \"weight\": \"1.0\",\n        \"activity_link\": \"http://web.archive.org/web/20240303060821/https://github.com/\",\n        \"g_title\": \"Here is some new code\",\n        \"g_number\": 75,\n        \"g_html_url\": \"http://web.archive.org/web/20240303060821/https://github.com/\",\n        \"g_created_at\": \"2023-06-21T15:54:46.723+01:00\",\n        \"is_pull_request\": null,\n        \"g_merged\": false,\n        \"g_merged_at\": null,\n        \"g_merged_by\": null\n      },\n      \"relationships\": {\n        \"activity_type\": {\n          \"data\": {\n            \"id\": \"oWVsm9\",\n            \"type\": \"activity_type\"\n          }\n        },\n        \"member\": {\n          \"data\": {\n            \"id\": \"jL5SZA\",\n            \"type\": \"member\"\n          }\n        },\n        \"repository\": {\n          \"data\": {\n            \"id\": \"6eeTk6\",\n            \"type\": \"repository\"\n          }\n        }\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "59101d6e-5713-48cb-8e29-11b9cc27b281",
+    "name": "Orbit Activities Workspaces API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).",
+      "type": "text/plain"
+    }
+  }
+}

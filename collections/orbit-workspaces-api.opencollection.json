@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Orbit Activities Workspaces API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Workspaces",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all workspaces for the current user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/workspaces",
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get all workspaces for the current user"
+        },
+        {
+          "info": {
+            "name": "Get a workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/workspaces/:workspace_slug",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_orbit_level_counts",
+                "value": "",
+                "type": "query",
+                "description": "Include the number of members by Orbit Level in the attributes"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get a workspace"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

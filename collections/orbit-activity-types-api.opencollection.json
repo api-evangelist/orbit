@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Orbit Activities Activity Types API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Activity Types",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all activity types for a workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/activity_types",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "List all activity types for a workspace"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

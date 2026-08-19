@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Orbit Activities Notes API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Notes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the member's notes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/members/:member_slug/notes",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "member_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get the member's notes"
+        },
+        {
+          "info": {
+            "name": "Create a note",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/members/:member_slug/notes",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "member_slug",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Create a note"
+        },
+        {
+          "info": {
+            "name": "Update a note",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/members/:member_slug/notes/:id",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "member_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Update a note"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,193 @@
+{
+  "item": [
+    {
+      "id": "44e91d48-7083-40cc-a43b-d2cc909dc006",
+      "name": "Reports",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4309f469-7e81-4b3b-a471-205f715d085f",
+          "name": "Get a workspace stats",
+          "request": {
+            "name": "Get a workspace stats",
+            "description": {},
+            "url": {
+              "path": [
+                ":workspace_slug",
+                "reports"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "start_date",
+                  "value": "<string>",
+                  "description": "Filter activities after this date. Format: YYYY-MM-DD."
+                },
+                {
+                  "disabled": false,
+                  "key": "end_date",
+                  "value": "<string>",
+                  "description": "Filter activities before this date. Format: YYYY-MM-DD."
+                },
+                {
+                  "disabled": false,
+                  "key": "relative",
+                  "value": "<string>",
+                  "description": "Relative timeframes. Format: this_<integer>_<period>, with period in [days, weeks, months, years]. For example, this_30_days."
+                },
+                {
+                  "disabled": false,
+                  "key": "properties",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "activity_type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>",
+                  "description": "Deprecated in favor of the activity_type parameter."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1c6c3e48-f883-4936-b215-79dc7177547e",
+              "name": "success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "reports"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "end_date",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "relative",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "properties",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "activity_type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"id\": \"1XOtmn\",\n    \"type\": \"statistics\",\n    \"attributes\": {\n      \"workspace_id\": \"1XOtmn\",\n      \"timeframe\": {\n        \"start_date\": \"2023-05-22\",\n        \"end_date\": \"2023-06-21\",\n        \"start_date_last\": \"2023-04-21\",\n        \"end_date_last\": \"2023-05-21\"\n      },\n      \"overview\": {\n        \"total_members_count\": 1,\n        \"members_on_orbit_level_1_count\": 0,\n        \"members_on_orbit_level_2_count\": 0,\n        \"members_on_orbit_level_3_count\": 0,\n        \"members_on_orbit_level_4_count\": 0,\n        \"members_on_orbit_level_none_count\": 1\n      },\n      \"members\": {\n        \"active_count\": 1,\n        \"active_delta\": 0,\n        \"new_count\": 1,\n        \"new_delta\": 0,\n        \"returning_count\": 0,\n        \"returning_delta\": 0\n      },\n      \"activities\": {\n        \"total_count\": 1,\n        \"total_delta\": 0,\n        \"spec:activity\": {\n          \"source\": \"mysource\",\n          \"count\": 1,\n          \"delta\": 0,\n          \"members\": {\n            \"active_count\": 1,\n            \"active_delta\": 0,\n            \"new_count\": 1,\n            \"new_delta\": 0,\n            \"returning_count\": 0,\n            \"returning_delta\": 0\n          }\n        },\n        \"foo:activity\": {\n          \"source\": \"mysource\",\n          \"count\": 0,\n          \"delta\": 0,\n          \"members\": {\n            \"active_count\": 0,\n            \"active_delta\": 0,\n            \"new_count\": 0,\n            \"new_delta\": 0,\n            \"returning_count\": 0,\n            \"returning_delta\": 0\n          }\n        }\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e7858694-03e5-468e-8bfd-ad3f610fe2c7",
+    "name": "Orbit Activities Reports API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).",
+      "type": "text/plain"
+    }
+  }
+}

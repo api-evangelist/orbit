@@ -1,0 +1,404 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Orbit Activities API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Activities",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List activities for a workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/activities",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "affiliation",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "member_tags",
+                "value": "",
+                "type": "query",
+                "description": "The list of tags to filter against. Separate tags with `,` to do an intersection (AND), or with `|` to do a union (OR)"
+              },
+              {
+                "name": "orbit",
+                "value": "",
+                "type": "query",
+                "description": "The list of orbit levels to filter against. Accepted values are 1, 2, 3, 4, n. In the request, a format like `23` would include levels 2 and 3. `n` is for members with no orbit level."
+              },
+              {
+                "name": "activity_type",
+                "value": "",
+                "type": "query",
+                "description": "Comma separated list of activity types"
+              },
+              {
+                "name": "identity",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "company[]",
+                "value": "",
+                "type": "query",
+                "description": "Comma separated list of companies. The union (OR) of companies is applied."
+              },
+              {
+                "name": "title[]",
+                "value": "",
+                "type": "query",
+                "description": "Comma separated list of job titles. The union (OR) of job titles is applied."
+              },
+              {
+                "name": "regions[]",
+                "value": "",
+                "type": "query",
+                "description": "Comma separated list of regions. The union (OR) of regions is applied."
+              },
+              {
+                "name": "countries[]",
+                "value": "",
+                "type": "query",
+                "description": "Comma separated list of countries. The union (OR) of countries is applied."
+              },
+              {
+                "name": "cities[]",
+                "value": "",
+                "type": "query",
+                "description": "Comma separated list of cities. The union (OR) of cities is applied."
+              },
+              {
+                "name": "start_date",
+                "value": "",
+                "type": "query",
+                "description": "Filter activities after this date. Format: YYYY-MM-DD."
+              },
+              {
+                "name": "end_date",
+                "value": "",
+                "type": "query",
+                "description": "Filter activities before this date. Format: YYYY-MM-DD."
+              },
+              {
+                "name": "relative",
+                "value": "",
+                "type": "query",
+                "description": "Relative timeframes. Format: this_<integer>_<period>, with period in [days, weeks, months, years]. For example, this_30_days."
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "direction",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "items",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "Deprecated in favor of the activity_type parameter."
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "List activities for a workspace"
+        },
+        {
+          "info": {
+            "name": "Create a Custom or a Content activity for a new or existing member",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/activities",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Use this method when you know an identity of the member (github, email, twitter, etc.) but not their Orbit ID. Pass fields in the member object to update the member in addition to creating the activity."
+        },
+        {
+          "info": {
+            "name": "Get an activity in the workspace",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/activities/:id",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Get an activity in the workspace"
+        },
+        {
+          "info": {
+            "name": "List activities for a member",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/members/:member_slug/activities",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "member_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "direction",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "items",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "activity_type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "Deprecated in favor of the activity_type parameter."
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "List activities for a member"
+        },
+        {
+          "info": {
+            "name": "Create a Custom or a Content activity for a member",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/members/:member_slug/activities",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "member_slug",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Create a Custom or a Content activity for a member"
+        },
+        {
+          "info": {
+            "name": "Update a custom activity for a member",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/members/:member_slug/activities/:id",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "member_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Update a custom activity for a member"
+        },
+        {
+          "info": {
+            "name": "Delete a post activity",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/members/:member_slug/activities/:id",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "member_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Delete a post activity"
+        },
+        {
+          "info": {
+            "name": "List member activities in an organization",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1/:workspace_slug/organizations/:organization_id/activities",
+            "params": [
+              {
+                "name": "workspace_slug",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "organization_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "direction",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "items",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "activity_type",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "List member activities in an organization"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

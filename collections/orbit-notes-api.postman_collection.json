@@ -1,0 +1,515 @@
+{
+  "item": [
+    {
+      "id": "c44e73a3-8cd7-4389-a155-5bec0e93b92c",
+      "name": "Notes",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "28c03f93-f8be-4297-bf5a-a9edc62fb15e",
+          "name": "Create a note",
+          "request": {
+            "name": "Create a note",
+            "description": {},
+            "url": {
+              "path": [
+                ":workspace_slug",
+                "members",
+                ":member_slug",
+                "notes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "member_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"body\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9daa3edc-b470-4870-9667-7eff1827c146",
+              "name": "note created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "members",
+                    ":member_slug",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "member_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"id\": \"qR4fVo\",\n    \"type\": \"note\",\n    \"attributes\": {\n      \"id\": \"qR4fVo\",\n      \"created_at\": \"2023-06-21T14:54:15.114Z\",\n      \"body\": \"heyo\",\n      \"updated_at\": \"2023-06-21T14:54:15.114Z\"\n    },\n    \"relationships\": {\n      \"member\": {\n        \"data\": {\n          \"id\": \"jDdSYG\",\n          \"type\": \"member\"\n        }\n      },\n      \"user\": {\n        \"data\": {\n          \"id\": \"ZgeFNz\",\n          \"type\": \"user\"\n        }\n      }\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4cea8767-d468-4f7d-afd3-915a55c00452",
+              "name": "forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "members",
+                    ":member_slug",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "member_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "88d0a044-7c47-4834-b26e-2cce3ab714bf",
+          "name": "Get the member's notes",
+          "request": {
+            "name": "Get the member's notes",
+            "description": {},
+            "url": {
+              "path": [
+                ":workspace_slug",
+                "members",
+                ":member_slug",
+                "notes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "member_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a8b39ba8-3db5-4733-b7df-6de4ea9f3e9e",
+              "name": "success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "members",
+                    ":member_slug",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "member_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"o5Nf2J\",\n      \"type\": \"note\",\n      \"attributes\": {\n        \"id\": \"o5Nf2J\",\n        \"created_at\": \"2023-06-21T14:54:15.417Z\",\n        \"body\": \"heyo\",\n        \"updated_at\": \"2023-06-21T14:54:15.417Z\"\n      },\n      \"relationships\": {\n        \"member\": {\n          \"data\": {\n            \"id\": \"jPESm8\",\n            \"type\": \"member\"\n          }\n        },\n        \"user\": {\n          \"data\": {\n            \"id\": \"lqAFn8\",\n            \"type\": \"user\"\n          }\n        }\n      }\n    }\n  ],\n  \"included\": [\n    {\n      \"id\": \"jPESm8\",\n      \"type\": \"member\",\n      \"attributes\": {\n        \"avatar_url\": \"http://web.archive.org/web/20240303060821/http://github.com/avatar.png\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"company\": null,\n        \"title\": null,\n        \"created_at\": \"2023-06-21T14:54:15.397Z\",\n        \"deleted_at\": null,\n        \"location\": null,\n        \"name\": \"MsKirkKemmer\",\n        \"pronouns\": null,\n        \"reach\": 0,\n        \"shipping_address\": null,\n        \"slug\": \"mskirkkemmer\",\n        \"source\": \"installation\",\n        \"tag_list\": [],\n        \"tags\": [],\n        \"teammate\": false,\n        \"tshirt\": null,\n        \"updated_at\": \"2023-06-21T14:54:15.397Z\",\n        \"merged_at\": null,\n        \"url\": null,\n        \"orbit_url\": \"http://web.archive.org/web/20240303060821/http://localhost:3000/mariahturner/members/mskirkkemmer\",\n        \"created\": false,\n        \"id\": \"jPESm8\",\n        \"orbit_level\": null,\n        \"love\": null,\n        \"first_activity_occurred_at\": null,\n        \"last_activity_occurred_at\": null,\n        \"activities_count\": 0,\n        \"activities_score\": 0,\n        \"twitter\": null,\n        \"github\": null,\n        \"discourse\": null,\n        \"email\": null,\n        \"devto\": null,\n        \"linkedin\": null,\n        \"discord\": null,\n        \"github_followers\": null,\n        \"twitter_followers\": null,\n        \"topics\": null,\n        \"languages\": null\n      },\n      \"relationships\": {\n        \"identities\": {\n          \"data\": []\n        },\n        \"organizations\": {\n          \"data\": []\n        }\n      }\n    },\n    {\n      \"id\": \"lqAFn8\",\n      \"type\": \"user\",\n      \"attributes\": {\n        \"name\": \"TristanBreitenberg\",\n        \"updated_at\": \"2023-06-21T14:54:15.415Z\",\n        \"created_at\": \"2023-06-21T14:54:15.409Z\"\n      }\n    }\n  ],\n  \"links\": {\n    \"first\": \"/mariahturner/members/mskirkkemmer/notes?page=1\",\n    \"last\": \"/mariahturner/members/mskirkkemmer/notes?page=1\",\n    \"prev\": null,\n    \"next\": null\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2c915865-a875-490d-a879-b88a7e992816",
+          "name": "Update a note",
+          "request": {
+            "name": "Update a note",
+            "description": {},
+            "url": {
+              "path": [
+                ":workspace_slug",
+                "members",
+                ":member_slug",
+                "notes",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "member_slug",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"body\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "78d20328-cc3c-4f6f-af5b-1b3b16de8640",
+              "name": "note updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "members",
+                    ":member_slug",
+                    "notes",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "member_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6d0978e5-5aa5-46f3-8cc0-f1d892fe8074",
+    "name": "Orbit Activities Notes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).",
+      "type": "text/plain"
+    }
+  }
+}

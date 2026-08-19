@@ -1,0 +1,555 @@
+{
+  "item": [
+    {
+      "id": "b664873a-a67c-49d6-9881-d961316c8557",
+      "name": "Organizations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7cd2a42e-8c21-44d1-b7b8-06d4d167f99a",
+          "name": "List organizations in a workspace",
+          "request": {
+            "name": "List organizations in a workspace",
+            "description": {},
+            "url": {
+              "path": [
+                ":workspace_slug",
+                "organizations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "query",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "direction",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "items",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8a398ce7-61fe-4a81-8832-3e1b2ade0f71",
+              "name": "success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "organizations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "query",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "page",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "direction",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "items",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"n5ZF98\",\n      \"type\": \"organization\",\n      \"attributes\": {\n        \"id\": \"n5ZF98\",\n        \"name\": \"Organization2\",\n        \"website\": \"org2.example.com\",\n        \"logo_url\": null,\n        \"members_count\": 1,\n        \"employees_count\": null,\n        \"organization_type\": null,\n        \"industry\": null,\n        \"estimated_annual_revenue\": null,\n        \"founded_in\": null,\n        \"location\": null,\n        \"twitter\": null,\n        \"twitter_followers\": null,\n        \"facebook\": null,\n        \"facebook_followers\": null,\n        \"linkedin\": null,\n        \"crunchbase\": null,\n        \"email_addresses\": null,\n        \"last_active\": null,\n        \"active_since\": null,\n        \"created_at\": \"2023-06-21T14:54:41.767Z\",\n        \"updated_at\": \"2023-06-21T14:54:41.767Z\",\n        \"lifecycle_stage\": null,\n        \"deal_closed_date\": null,\n        \"price_plan\": null,\n        \"crm_uid\": null,\n        \"crm_url\": null,\n        \"owner_name\": null,\n        \"owner_email\": null,\n        \"source\": null\n      }\n    },\n    {\n      \"id\": \"V02F9A\",\n      \"type\": \"organization\",\n      \"attributes\": {\n        \"id\": \"V02F9A\",\n        \"name\": \"Organization1\",\n        \"website\": \"org1.example.com\",\n        \"logo_url\": null,\n        \"members_count\": 1,\n        \"employees_count\": null,\n        \"organization_type\": null,\n        \"industry\": null,\n        \"estimated_annual_revenue\": null,\n        \"founded_in\": null,\n        \"location\": null,\n        \"twitter\": null,\n        \"twitter_followers\": null,\n        \"facebook\": null,\n        \"facebook_followers\": null,\n        \"linkedin\": null,\n        \"crunchbase\": null,\n        \"email_addresses\": null,\n        \"last_active\": null,\n        \"active_since\": null,\n        \"created_at\": \"2023-06-21T14:54:41.746Z\",\n        \"updated_at\": \"2023-06-21T14:54:41.746Z\",\n        \"lifecycle_stage\": \"customer\",\n        \"deal_closed_date\": \"2023-06-21T14:54:41.805Z\",\n        \"price_plan\": \"Enterprise\",\n        \"crm_uid\": \"abcde123451\",\n        \"crm_url\": \"http://web.archive.org/web/20240303060821/https://example.com/1\",\n        \"owner_name\": \"John Toto\",\n        \"owner_email\": \"john.toto@example.com\",\n        \"source\": \"Fake CRM\"\n      }\n    }\n  ],\n  \"links\": {\n    \"first\": \"http://web.archive.org/web/20240303060821/http://localhost:3000/api/v1/dorindaabshire/organizations?direction=DESC&items=10&page=1&query=&sort=name&workspace=dorindaabshire\",\n    \"prev\": null,\n    \"next\": null\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "033d8e92-c086-41b9-9c53-abc12f13767c",
+          "name": "Get an organization",
+          "request": {
+            "name": "Get an organization",
+            "description": {},
+            "url": {
+              "path": [
+                ":workspace_slug",
+                "organizations",
+                ":organization_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "organization_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f7389b26-83db-41e1-bd5c-9c0771742daf",
+              "name": "success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "organizations",
+                    ":organization_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "organization_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"id\": \"aWQFlA\",\n    \"type\": \"organization\",\n    \"attributes\": {\n      \"id\": \"aWQFlA\",\n      \"name\": \"Organization1\",\n      \"website\": \"example-47.com\",\n      \"logo_url\": null,\n      \"members_count\": 1,\n      \"employees_count\": null,\n      \"organization_type\": null,\n      \"industry\": null,\n      \"estimated_annual_revenue\": null,\n      \"founded_in\": null,\n      \"location\": null,\n      \"twitter\": null,\n      \"twitter_followers\": null,\n      \"facebook\": null,\n      \"facebook_followers\": null,\n      \"linkedin\": null,\n      \"crunchbase\": null,\n      \"email_addresses\": null,\n      \"last_active\": null,\n      \"active_since\": null,\n      \"created_at\": \"2023-06-21T14:54:42.605Z\",\n      \"updated_at\": \"2023-06-21T14:54:42.605Z\",\n      \"lifecycle_stage\": null,\n      \"deal_closed_date\": null,\n      \"price_plan\": null,\n      \"crm_uid\": null,\n      \"crm_url\": null,\n      \"owner_name\": null,\n      \"owner_email\": null,\n      \"source\": null\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b921680-8dde-4335-8604-fa7f5323ab18",
+          "name": "Update an organization",
+          "request": {
+            "name": "Update an organization",
+            "description": {},
+            "url": {
+              "path": [
+                ":workspace_slug",
+                "organizations",
+                ":organization_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "organization_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"lifecycle_stage\": \"<string>\",\n  \"crm_url\": \"<string>\",\n  \"source\": \"<string>\",\n  \"deal_closed_date\": \"<string>\",\n  \"price_plan\": \"<string>\",\n  \"crm_uid\": \"<string>\",\n  \"owner_name\": \"<string>\",\n  \"owner_email\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7ac40181-13c6-4f1e-8130-a01dd4397fe6",
+              "name": "organization updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "organizations",
+                    ":organization_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "organization_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lifecycle_stage\": \"<string>\",\n  \"crm_url\": \"<string>\",\n  \"source\": \"<string>\",\n  \"deal_closed_date\": \"<string>\",\n  \"price_plan\": \"<string>\",\n  \"crm_uid\": \"<string>\",\n  \"owner_name\": \"<string>\",\n  \"owner_email\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "57c2d3cc-8e27-4c7a-9322-d2996b9c5cc7",
+              "name": "forbidden",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "organizations",
+                    ":organization_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "organization_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lifecycle_stage\": \"<string>\",\n  \"crm_url\": \"<string>\",\n  \"source\": \"<string>\",\n  \"deal_closed_date\": \"<string>\",\n  \"price_plan\": \"<string>\",\n  \"crm_uid\": \"<string>\",\n  \"owner_name\": \"<string>\",\n  \"owner_email\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5571cd08-78a2-40f1-96bd-b3ad9f568b54",
+              "name": "deal_closed_date is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "organizations",
+                    ":organization_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "organization_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"lifecycle_stage\": \"<string>\",\n  \"crm_url\": \"<string>\",\n  \"source\": \"<string>\",\n  \"deal_closed_date\": \"<string>\",\n  \"price_plan\": \"<string>\",\n  \"crm_uid\": \"<string>\",\n  \"owner_name\": \"<string>\",\n  \"owner_email\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "12b75f96-0707-47dd-8855-89dc2c1c0eba",
+    "name": "Orbit Activities Organizations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).",
+      "type": "text/plain"
+    }
+  }
+}

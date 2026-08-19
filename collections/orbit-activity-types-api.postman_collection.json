@@ -1,0 +1,133 @@
+{
+  "item": [
+    {
+      "id": "03c9e9f3-b85d-4d9b-8b3e-94eba053444b",
+      "name": "Activity Types",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "bfb36936-b762-4f68-9dba-b705ca4f9eb2",
+          "name": "List all activity types for a workspace",
+          "request": {
+            "name": "List all activity types for a workspace",
+            "description": {},
+            "url": {
+              "path": [
+                ":workspace_slug",
+                "activity_types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "workspace_slug",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c674c806-7003-4380-8b6e-672863b4c984",
+              "name": "success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ":workspace_slug",
+                    "activity_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "workspace_slug",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": \"5Gds1O\",\n      \"type\": \"activity_type\",\n      \"attributes\": {\n        \"name\": \"Created content\",\n        \"short_name\": \"Content created\",\n        \"key\": \"post:created\",\n        \"channel\": \"content\",\n        \"source\": \"content\",\n        \"weight\": \"1.0\"\n      }\n    },\n    {\n      \"id\": \"DOnsmL\",\n      \"type\": \"activity_type\",\n      \"attributes\": {\n        \"name\": \"Activated their account on product\",\n        \"short_name\": \"Activated account\",\n        \"key\": \"activated_account\",\n        \"channel\": \"product\",\n        \"source\": \"product\",\n        \"weight\": \"6.0\"\n      }\n    }\n  ],\n  \"links\": {\n    \"first\": \"/alejandrawehner/activity_types?page=1\",\n    \"last\": \"/alejandrawehner/activity_types?page=1\",\n    \"prev\": null,\n    \"next\": null\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d82fe70e-f660-4206-bea1-8c66433a6c31",
+    "name": "Orbit Activities Activity Types API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).",
+      "type": "text/plain"
+    }
+  }
+}
