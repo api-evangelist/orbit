@@ -25,6 +25,15 @@ tags:
   - Community Management
   - Member Tracking
   - Community Analytics
+  - Open-Source
+  - Developer Engagement
+tags_raw:
+  - Developer Relations
+  - Community Intelligence
+  - DevRel
+  - Community Management
+  - Member Tracking
+  - Community Analytics
   - Open Source
   - Developer Engagement
 apis:
@@ -114,6 +123,8 @@ apis:
   humanURL: https://orbit.love/developers
   baseURL: https://app.orbit.love/api/v1
   tags:
+  - Organization
+  tags_raw:
   - Organizations
   properties:
   - type: OpenAPI
@@ -154,6 +165,8 @@ apis:
   humanURL: https://orbit.love/developers
   baseURL: https://app.orbit.love/api/v1
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -174,6 +187,8 @@ apis:
   humanURL: https://orbit.love/developers
   baseURL: https://app.orbit.love/api/v1
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
