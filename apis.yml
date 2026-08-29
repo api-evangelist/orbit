@@ -1,5 +1,19 @@
 name: Orbit
 description: Developer relations and community intelligence platform with a REST API for tracking member activities, measuring community growth, and managing developer advocates and contributors. Orbit was acquired by Postman in April 2024.
+deliveryModel:
+  model: open-core
+  license: MIT
+  open_source: true
+  commercial: true
+  callable_host: true
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: self-serve
@@ -224,6 +238,14 @@ apis:
   - type: GitHubRepository
     url: https://github.com/orbit-love/ruby-orbit-activities
 common:
+  - type: IssueTracker
+    url: https://github.com/orbit-love/ruby-orbit-members/issues
+  - type: Releases
+    url: https://github.com/orbit-love/ruby-orbit-members/releases
+  - type: CodeOfConduct
+    url: https://github.com/orbit-love/ruby-orbit-members/blob/main/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/orbit-love/ruby-orbit-members/blob/main/CONTRIBUTING.md
   - type: License
     name: MIT
     url: https://github.com/orbit-love/ruby-orbit-members/blob/main/LICENSE
