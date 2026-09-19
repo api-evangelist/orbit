@@ -224,6 +224,8 @@ apis:
   humanURL: https://orbit.love/developers
   baseURL: https://app.orbit.love/api/v1
   tags:
+  - Workspace
+  tags_raw:
   - Workspaces
   properties:
   - type: OpenAPI
