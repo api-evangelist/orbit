@@ -1,8 +1,8 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Orbit Activities Workspaces API
+  title: Orbit Workspaces API
   version: v1
-  description: Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).
+  description: Please see the complete Orbit API documentation at https://api.orbit.love/.
 servers:
 - url: http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1
 tags:
@@ -33,6 +33,8 @@ paths:
                     repositories:
                       data: []
                 included: []
+      operationId: getWorkspaces
+      x-operation-id-source: derived
   /workspaces/{workspace_slug}:
     get:
       summary: Get a workspace
@@ -176,6 +178,8 @@ paths:
                       data:
                         id: 6eeTk6
                         type: repository
+      operationId: getWorkspacesByWorkspaceSlug
+      x-operation-id-source: derived
 components:
   securitySchemes:
     bearer:

@@ -1,8 +1,8 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Orbit Activities Members API
+  title: Orbit Members API
   version: v1
-  description: Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).
+  description: Please see the complete Orbit API documentation at https://api.orbit.love/.
 servers:
 - url: http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1
 tags:
@@ -59,6 +59,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/identity'
+      operationId: postByWorkspaceSlugMembersByMemberSlugIdentities
+      x-operation-id-source: derived
     delete:
       summary: Remove identity from a member
       tags:
@@ -94,6 +96,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/identity'
+      operationId: deleteByWorkspaceSlugMembersByMemberSlugIdentities
+      x-operation-id-source: derived
   /{workspace_slug}/members:
     get:
       summary: List members in a workspace
@@ -439,6 +443,8 @@ paths:
                   first: http://web.archive.org/web/20240303060821/http://localhost:3000/api/v1/herschelmosciskidvm/members?activities_count_max=99&activities_count_min=1&activity_type=type%3Anew%2Cspec%3Aactivity&affiliation=&cities%5B%5D=&company%5B%5D=&countries%5B%5D=&direction=DESC&end_date=&identity=&items=10&member_tags=ruby%7Crails%2C-go&orbit=&page=1&query=&regions%5B%5D=&relative=&sort=last_activity&start_date=&title%5B%5D=&workspace=herschelmosciskidvm
                   prev: null
                   next: null
+      operationId: getByWorkspaceSlugMembers
+      x-operation-id-source: derived
     post:
       summary: Create or update a member
       tags:
@@ -670,6 +676,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/member_and_identity'
+      operationId: postByWorkspaceSlugMembers
+      x-operation-id-source: derived
   /{workspace_slug}/members/{member_slug}:
     get:
       summary: Get a member
@@ -784,6 +792,8 @@ paths:
                     owner_name: null
                     owner_email: null
                     source: null
+      operationId: getByWorkspaceSlugMembersByMemberSlug
+      x-operation-id-source: derived
     put:
       summary: Update a member
       tags:
@@ -811,6 +821,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/member'
+      operationId: putByWorkspaceSlugMembersByMemberSlug
+      x-operation-id-source: derived
     delete:
       summary: Delete a member
       tags:
@@ -833,6 +845,8 @@ paths:
           description: member deleted
         '403':
           description: forbidden
+      operationId: deleteByWorkspaceSlugMembersByMemberSlug
+      x-operation-id-source: derived
   /{workspace_slug}/members/find:
     get:
       summary: Find a member by an identity
@@ -983,6 +997,8 @@ paths:
                     owner_name: null
                     owner_email: null
                     source: null
+      operationId: getByWorkspaceSlugMembersFind
+      x-operation-id-source: derived
   /{workspace_slug}/organizations/{organization_id}/members:
     get:
       summary: List members in an organization
@@ -1043,8 +1059,17 @@ paths:
                   last: /mrfernjohns/organizations/BqkFkv/members?page=1&items=10
                   prev: null
                   next: null
+      operationId: getByWorkspaceSlugOrganizationsByOrganizationIdMembers
+      x-operation-id-source: derived
 components:
   schemas:
+    member_and_identity:
+      type: object
+      properties:
+        member:
+          $ref: '#/components/schemas/member'
+        identity:
+          $ref: '#/components/schemas/identity'
     member:
       type: object
       properties:
@@ -1096,13 +1121,6 @@ components:
         devto:
           type: string
           description: The member's DEV username
-    member_and_identity:
-      type: object
-      properties:
-        member:
-          $ref: '#/components/schemas/member'
-        identity:
-          $ref: '#/components/schemas/identity'
     identity:
       type: object
       description: Represents an email address, a profile on networks like github and twitter, or a record in another system.

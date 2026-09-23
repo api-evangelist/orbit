@@ -1,8 +1,8 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Orbit Activities Webhooks API
+  title: Orbit Webhooks API
   version: v1
-  description: Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).
+  description: Please see the complete Orbit API documentation at https://api.orbit.love/.
 servers:
 - url: http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1
 tags:
@@ -47,6 +47,8 @@ paths:
                   last: /fake-workspace/webhooks?page=1
                   prev: null
                   next: null
+      operationId: getByWorkspaceSlugWebhooks
+      x-operation-id-source: derived
     post:
       summary: Create a webhook
       tags:
@@ -69,6 +71,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/webhook_subscription'
+      operationId: postByWorkspaceSlugWebhooks
+      x-operation-id-source: derived
   /{workspace_slug}/webhooks/{id}:
     get:
       summary: Get a webhook
@@ -108,6 +112,8 @@ paths:
                     member_tags: []
                     activity_keywords: []
                     include_teammates: false
+      operationId: getByWorkspaceSlugWebhooksById
+      x-operation-id-source: derived
     put:
       summary: Update a webhook
       tags:
@@ -135,6 +141,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/webhook_subscription'
+      operationId: putByWorkspaceSlugWebhooksById
+      x-operation-id-source: derived
     delete:
       summary: Delete a webhook
       tags:
@@ -157,6 +165,8 @@ paths:
           description: webhook deleted
         '403':
           description: forbidden
+      operationId: deleteByWorkspaceSlugWebhooksById
+      x-operation-id-source: derived
 components:
   schemas:
     webhook_subscription:

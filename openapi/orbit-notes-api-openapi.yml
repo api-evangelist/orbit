@@ -1,8 +1,8 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Orbit Activities Notes API
+  title: Orbit Notes API
   version: v1
-  description: Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).
+  description: Please see the complete Orbit API documentation at https://api.orbit.love/.
 servers:
 - url: http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1
 tags:
@@ -56,6 +56,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/note'
+      operationId: postByWorkspaceSlugMembersByMemberSlugNotes
+      x-operation-id-source: derived
     get:
       summary: Get the member's notes
       tags:
@@ -161,6 +163,8 @@ paths:
                   last: /mariahturner/members/mskirkkemmer/notes?page=1
                   prev: null
                   next: null
+      operationId: getByWorkspaceSlugMembersByMemberSlugNotes
+      x-operation-id-source: derived
   /{workspace_slug}/members/{member_slug}/notes/{id}:
     put:
       summary: Update a note
@@ -192,6 +196,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/note'
+      operationId: putByWorkspaceSlugMembersByMemberSlugNotesById
+      x-operation-id-source: derived
 components:
   schemas:
     note:

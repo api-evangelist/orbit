@@ -1,8 +1,8 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
   title: Orbit Activities API
   version: v1
-  description: Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).
+  description: Please see the complete Orbit API documentation at https://api.orbit.love/.
 servers:
 - url: http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1
 tags:
@@ -396,6 +396,8 @@ paths:
                   first: http://web.archive.org/web/20240303060821/http://localhost:3000/api/v1/avelinawiza/activities?activity_type=&affiliation=&cities%5B%5D=&company%5B%5D=&countries%5B%5D=&direction=DESC&end_date=&filters=true&identity=&items=10&member_tags=&orbit=&page=1&regions%5B%5D=&relative=&sort=occurred_at&start_date=&title%5B%5D=&workspace=avelinawiza
                   prev: null
                   next: null
+      operationId: getByWorkspaceSlugActivities
+      x-operation-id-source: derived
     post:
       summary: Create a Custom or a Content activity for a new or existing member
       tags:
@@ -551,6 +553,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/activity_and_identity'
+      operationId: postByWorkspaceSlugActivities
+      x-operation-id-source: derived
   /{workspace_slug}/activities/{id}:
     get:
       summary: Get an activity in the workspace
@@ -683,6 +687,8 @@ paths:
                     name: ClarettaKunzeIII
                     updated_at: '2023-06-21T14:54:07.203Z'
                     created_at: '2023-06-21T14:54:07.195Z'
+      operationId: getByWorkspaceSlugActivitiesById
+      x-operation-id-source: derived
   /{workspace_slug}/members/{member_slug}/activities:
     get:
       summary: List activities for a member
@@ -834,6 +840,8 @@ paths:
                   last: /parishuelphd/members/delphalegros/activities?page=1&direction=DESC&items=10&sort=occurred_at&activity_type=spec%3Aactivity&type=
                   prev: null
                   next: null
+      operationId: getByWorkspaceSlugMembersByMemberSlugActivities
+      x-operation-id-source: derived
     post:
       summary: Create a Custom or a Content activity for a member
       tags:
@@ -976,6 +984,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/custom_or_post_activity'
+      operationId: postByWorkspaceSlugMembersByMemberSlugActivities
+      x-operation-id-source: derived
   /{workspace_slug}/members/{member_slug}/activities/{id}:
     delete:
       summary: Delete a post activity
@@ -1004,6 +1014,8 @@ paths:
           description: activity deleted
         '403':
           description: forbidden
+      operationId: deleteByWorkspaceSlugMembersByMemberSlugActivitiesById
+      x-operation-id-source: derived
     put:
       summary: Update a custom activity for a member
       tags:
@@ -1044,6 +1056,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/activity'
+      operationId: putByWorkspaceSlugMembersByMemberSlugActivitiesById
+      x-operation-id-source: derived
   /{workspace_slug}/organizations/{organization_id}/activities:
     get:
       summary: List member activities in an organization
@@ -1325,25 +1339,22 @@ paths:
                   last: /brandieschmelerii/organizations/nRRFKv/activities?page=1&direction=DESC&items=10&sort=occurred_at&activity_type=
                   prev: null
                   next: null
+      operationId: getByWorkspaceSlugOrganizationsByOrganizationIdActivities
+      x-operation-id-source: derived
 components:
   schemas:
-    post_activity:
-      title: Content Activity
-      type: object
-      properties:
-        url:
-          type: string
-          description: The url representing the post
-        occurred_at:
-          type: string
-          description: The date and time at which the content was published; defaults to now
-        activity_type:
-          type: string
-          enum:
-          - content
-      required:
-      - url
-      - activity_type
+    custom_or_post_activity:
+      oneOf:
+      - $ref: '#/components/schemas/activity'
+      - $ref: '#/components/schemas/post_activity'
+    activity_with_member:
+      title: Custom Activity
+      allOf:
+      - $ref: '#/components/schemas/activity'
+      - type: object
+        properties:
+          member:
+            $ref: '#/components/schemas/member'
     identity:
       type: object
       description: Represents an email address, a profile on networks like github and twitter, or a record in another system.
@@ -1380,54 +1391,23 @@ components:
           - $ref: '#/components/schemas/post_activity_with_member'
         identity:
           $ref: '#/components/schemas/identity'
-    activity_with_member:
-      title: Custom Activity
-      allOf:
-      - $ref: '#/components/schemas/activity'
-      - type: object
-        properties:
-          member:
-            $ref: '#/components/schemas/member'
-    custom_or_post_activity:
-      oneOf:
-      - $ref: '#/components/schemas/activity'
-      - $ref: '#/components/schemas/post_activity'
-    activity:
-      title: Custom Activity
+    post_activity:
+      title: Content Activity
       type: object
       properties:
-        description:
+        url:
           type: string
-          description: A description of the activity; displayed in the timeline
-        link:
-          type: string
-          description: A URL for the activity; displayed in the timeline
-        link_text:
-          type: string
-          description: The text for the timeline link
-        title:
-          type: string
-          description: A title for the activity; displayed in the timeline
-        weight:
-          type: string
-          description: A custom weight to be used in filters and reports; defaults to 1.
-        activity_type:
-          type: string
-          description: The type of activity - what action was done by the member. This is a legacy field, use activity_type_key instead.
-        activity_type_key:
-          type: string
-          description: The key for a custom activity type for the workspace. Will create a new activity type if it does not exist.
-        key:
-          type: string
-          description: Supply a key that must be unique or leave blank to have one generated.
+          description: The url representing the post
         occurred_at:
           type: string
-          description: The date and time the activity occurred; defaults to now
-        properties:
-          type: object
-          description: Key-value pairs to provide contextual metadata about an activity.
+          description: The date and time at which the content was published; defaults to now
+        activity_type:
+          type: string
+          enum:
+          - content
       required:
-      - title
+      - url
+      - activity_type
     post_activity_with_member:
       title: Content Activity
       allOf:
@@ -1487,6 +1467,42 @@ components:
         devto:
           type: string
           description: The member's DEV username
+    activity:
+      title: Custom Activity
+      type: object
+      properties:
+        description:
+          type: string
+          description: A description of the activity; displayed in the timeline
+        link:
+          type: string
+          description: A URL for the activity; displayed in the timeline
+        link_text:
+          type: string
+          description: The text for the timeline link
+        title:
+          type: string
+          description: A title for the activity; displayed in the timeline
+        weight:
+          type: string
+          description: A custom weight to be used in filters and reports; defaults to 1.
+        activity_type:
+          type: string
+          description: The type of activity - what action was done by the member. This is a legacy field, use activity_type_key instead.
+        activity_type_key:
+          type: string
+          description: The key for a custom activity type for the workspace. Will create a new activity type if it does not exist.
+        key:
+          type: string
+          description: Supply a key that must be unique or leave blank to have one generated.
+        occurred_at:
+          type: string
+          description: The date and time the activity occurred; defaults to now
+        properties:
+          type: object
+          description: Key-value pairs to provide contextual metadata about an activity.
+      required:
+      - title
   securitySchemes:
     bearer:
       type: http

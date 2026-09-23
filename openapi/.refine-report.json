@@ -1,15 +1,7 @@
 {
   "provider": "orbit",
   "sources": [
-    "orbit-activities-api-openapi.yml",
-    "orbit-activity-types-api-openapi.yml",
-    "orbit-members-api-openapi.yml",
-    "orbit-notes-api-openapi.yml",
-    "orbit-organizations-api-openapi.yml",
-    "orbit-reports-api-openapi.yml",
-    "orbit-users-api-openapi.yml",
-    "orbit-webhooks-api-openapi.yml",
-    "orbit-workspaces-api-openapi.yml"
+    "_original/orbit-rest-api-openapi.yml"
   ],
   "outputs": [
     "orbit-activities-api-openapi.yml",
@@ -25,6 +17,20 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "orbit-rest-api-openapi.yml: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "orbit-activities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "orbit-activity-types-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "orbit-members-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "orbit-notes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "orbit-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "orbit-reports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "orbit-users-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "orbit-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "orbit-workspaces-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,8 +1,8 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Orbit Activities Organizations API
+  title: Orbit Organizations API
   version: v1
-  description: Please see the complete Orbit API documentation at [https://api.orbit.love/](https://api.orbit.love/).
+  description: Please see the complete Orbit API documentation at https://api.orbit.love/.
 servers:
 - url: http://web.archive.org/web/20240303060821/https://app.orbit.love/api/v1
 tags:
@@ -130,6 +130,8 @@ paths:
                   first: http://web.archive.org/web/20240303060821/http://localhost:3000/api/v1/dorindaabshire/organizations?direction=DESC&items=10&page=1&query=&sort=name&workspace=dorindaabshire
                   prev: null
                   next: null
+      operationId: getByWorkspaceSlugOrganizations
+      x-operation-id-source: derived
   /{workspace_slug}/organizations/{organization_id}:
     get:
       summary: Get an organization
@@ -188,6 +190,8 @@ paths:
                     owner_name: null
                     owner_email: null
                     source: null
+      operationId: getByWorkspaceSlugOrganizationsByOrganizationId
+      x-operation-id-source: derived
     put:
       summary: Update an organization
       tags:
@@ -217,6 +221,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/organization'
+      operationId: putByWorkspaceSlugOrganizationsByOrganizationId
+      x-operation-id-source: derived
 components:
   schemas:
     organization:
