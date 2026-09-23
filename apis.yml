@@ -284,3 +284,6 @@ maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
 aid: orbit
+x-parent: postman
+x-relationship: acquisition
+x-acquired: 2024
