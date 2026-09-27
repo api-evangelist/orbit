@@ -40,8 +40,9 @@ tags:
   - Community Management
   - Member Tracking
   - Community Analytics
-  - Open-Source
+  - Open Source
   - Developer Engagement
+  - Defunct
 tags_raw:
   - Developer Relations
   - Community Intelligence
@@ -51,6 +52,8 @@ tags_raw:
   - Community Analytics
   - Open Source
   - Developer Engagement
+  - Open-Source
+  - Defunct
 apis:
 - aid: orbit:orbit-activities-api
   name: Orbit Activities API
@@ -287,3 +290,5 @@ aid: orbit
 x-parent: postman
 x-relationship: acquisition
 x-acquired: 2024
+x-status: defunct
+x-status-source: https://orbit.love/faq-on-merger  # acquired by Postman April 2024; ingestion stopped 2024-05-31, all functionality disabled 2024-07-11 (roadmap#593)
