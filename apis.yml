@@ -1,5 +1,10 @@
 name: Orbit
-description: Developer relations and community intelligence platform with a REST API for tracking member activities, measuring community growth, and managing developer advocates and contributors. Orbit was acquired by Postman in April 2024.
+
+description: Orbit is a developer relations and community intelligence platform that provides a RESTful API for tracking member activities, measuring
+  community growth, and managing developer advocates and contributors. The service offers endpoints for activities, members, organizations, notes,
+  reports, and webhooks, enabling integration of community data into internal tools and analytics pipelines. Orbit was acquired by Postman in
+  April 2024, after which the original platform was discontinued, but the API specifications remain available for legacy integrations.
+
 deliveryModel:
   model: open-core
   license: MIT
@@ -14,6 +19,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: paid
   onboarding: unknown
@@ -28,32 +34,105 @@ accessModel:
   - security
   generated: '2026-09-03'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/orbit.png
+
 url: https://raw.githubusercontent.com/api-evangelist/orbit/refs/heads/main/apis.yml
+
 created: '2026-06-13'
+
 modified: '2026-06-13'
+
 specificationVersion: '0.23'
+
 tags:
-  - Developer Relations
-  - Community Intelligence
-  - DevRel
-  - Community Management
-  - Member Tracking
-  - Community Analytics
-  - Open Source
-  - Developer Engagement
-  - Defunct
+- Developer Relations
+- Community Intelligence
+- DevRel
+- Community Management
+- Member Tracking
+- Community Analytics
+- Open Source
+- Developer Engagement
+- Defunct
+
 tags_raw:
-  - Developer Relations
-  - Community Intelligence
-  - DevRel
-  - Community Management
-  - Member Tracking
-  - Community Analytics
-  - Open Source
-  - Developer Engagement
-  - Open-Source
-  - Defunct
+- Developer Relations
+- Community Intelligence
+- DevRel
+- Community Management
+- Member Tracking
+- Community Analytics
+- Open Source
+- Developer Engagement
+- Open-Source
+- Defunct
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: Spectral
+  url: rules/orbit-rules.yml
+- type: Spectral
+  url: rules/orbit-jsonschema-spectral-rules.yml
+- type: JSONLD
+  url: json-ld/orbit-context.jsonld
+- type: Vocabulary
+  url: vocabulary/orbit-vocabulary.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DataModel
+  url: data-model/orbit-data-model.yml
+- type: ErrorCatalog
+  url: errors/orbit-problem-types.yml
+- type: Conformance
+  url: conformance/orbit-conformance.yml
+- type: Hosts
+  url: hosts/orbit-hosts.yml
+- type: Vendors
+  url: vendors/orbit-vendors.yml
+- type: IssueTracker
+  url: https://github.com/orbit-love/ruby-orbit-members/issues
+- type: Releases
+  url: https://github.com/orbit-love/ruby-orbit-members/releases
+- type: CodeOfConduct
+  url: https://github.com/orbit-love/ruby-orbit-members/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/orbit-love/ruby-orbit-members/blob/main/CONTRIBUTING.md
+- type: License
+  name: MIT
+  url: https://github.com/orbit-love/ruby-orbit-members/blob/main/LICENSE
+- type: AgenticAccess
+  url: agentic-access/orbit-agentic-access.yml
+- type: DomainSecurity
+  url: security/orbit-domain-security.yml
+- type: Authentication
+  url: authentication/orbit-authentication.yml
+- type: Website
+  url: https://orbit.love/
+- type: Documentation
+  url: https://docs.orbit.love/docs
+- type: GitHubOrg
+  url: https://github.com/orbit-love
+- type: LinkedIn
+  url: https://www.linkedin.com/company/orbitco
+- type: X
+  url: https://x.com/OrbitModel
+- type: Blog
+  url: https://orbit.love/blog
+- type: Pricing
+  url: https://orbit.love/pricing
+- type: StatusPage
+  url: https://status.orbit.love/
+- type: Plans
+  url: plans/orbit-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/orbit-rate-limits.yml
+- type: FinOps
+  url: finops/orbit-finops.yml
+
 apis:
 - aid: orbit:orbit-activities-api
   name: Orbit Activities API
@@ -75,6 +154,12 @@ apis:
     url: https://github.com/orbit-love/ruby-orbit-members
   - type: GitHubRepository
     url: https://github.com/orbit-love/ruby-orbit-activities
+  - type: JSONSchema
+    url: json-schema/orbit-activity-schema.json
+  - type: JSONSchema
+    url: json-schema/orbit-activity-and-identity-schema.json
+  - type: JSONSchema
+    url: json-schema/orbit-custom-or-post-activity-schema.json
 - aid: orbit:orbit-activity-types-api
   name: Orbit Activity Types API
   description: The Activity Types API from Orbit — 1 operation(s) for activity types.
@@ -115,6 +200,12 @@ apis:
     url: https://github.com/orbit-love/ruby-orbit-members
   - type: GitHubRepository
     url: https://github.com/orbit-love/ruby-orbit-activities
+  - type: JSONSchema
+    url: json-schema/orbit-member-schema.json
+  - type: JSONSchema
+    url: json-schema/orbit-identity-schema.json
+  - type: JSONSchema
+    url: json-schema/orbit-member-and-identity-schema.json
 - aid: orbit:orbit-notes-api
   name: Orbit Notes API
   description: The Notes API from Orbit — 2 operation(s) for notes.
@@ -135,6 +226,8 @@ apis:
     url: https://github.com/orbit-love/ruby-orbit-members
   - type: GitHubRepository
     url: https://github.com/orbit-love/ruby-orbit-activities
+  - type: JSONSchema
+    url: json-schema/orbit-note-schema.json
 - aid: orbit:orbit-organizations-api
   name: Orbit Organizations API
   description: The Organizations API from Orbit — 2 operation(s) for organizations.
@@ -157,6 +250,8 @@ apis:
     url: https://github.com/orbit-love/ruby-orbit-members
   - type: GitHubRepository
     url: https://github.com/orbit-love/ruby-orbit-activities
+  - type: JSONSchema
+    url: json-schema/orbit-organization-schema.json
 - aid: orbit:orbit-reports-api
   name: Orbit Reports API
   description: The Reports API from Orbit — 1 operation(s) for reports.
@@ -221,6 +316,8 @@ apis:
     url: https://github.com/orbit-love/ruby-orbit-members
   - type: GitHubRepository
     url: https://github.com/orbit-love/ruby-orbit-activities
+  - type: JSONSchema
+    url: json-schema/orbit-webhook-subscription-schema.json
 - aid: orbit:orbit-workspaces-api
   name: Orbit Workspaces API
   description: The Workspaces API from Orbit — 2 operation(s) for workspaces.
@@ -243,52 +340,21 @@ apis:
     url: https://github.com/orbit-love/ruby-orbit-members
   - type: GitHubRepository
     url: https://github.com/orbit-love/ruby-orbit-activities
-common:
-  - type: IssueTracker
-    url: https://github.com/orbit-love/ruby-orbit-members/issues
-  - type: Releases
-    url: https://github.com/orbit-love/ruby-orbit-members/releases
-  - type: CodeOfConduct
-    url: https://github.com/orbit-love/ruby-orbit-members/blob/main/CODE_OF_CONDUCT.md
-  - type: ContributionGuide
-    url: https://github.com/orbit-love/ruby-orbit-members/blob/main/CONTRIBUTING.md
-  - type: License
-    name: MIT
-    url: https://github.com/orbit-love/ruby-orbit-members/blob/main/LICENSE
-  - type: AgenticAccess
-    url: agentic-access/orbit-agentic-access.yml
-  - type: DomainSecurity
-    url: security/orbit-domain-security.yml
-  - type: Authentication
-    url: authentication/orbit-authentication.yml
-  - type: Website
-    url: https://orbit.love/
-  - type: Documentation
-    url: https://docs.orbit.love/docs
-  - type: GitHubOrg
-    url: https://github.com/orbit-love
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/orbitco
-  - type: X
-    url: https://x.com/OrbitModel
-  - type: Blog
-    url: https://orbit.love/blog
-  - type: Pricing
-    url: https://orbit.love/pricing
-  - type: StatusPage
-    url: https://status.orbit.love/
-  - type: Plans
-    url: plans/orbit-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/orbit-rate-limits.yml
-  - type: FinOps
-    url: finops/orbit-finops.yml
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+
 aid: orbit
+
 x-parent: postman
+
 x-relationship: acquisition
+
 x-acquired: 2024
+
 x-status: defunct
-x-status-source: https://orbit.love/faq-on-merger  # acquired by Postman April 2024; ingestion stopped 2024-05-31, all functionality disabled 2024-07-11 (roadmap#593)
+
+x-status-source: https://orbit.love/faq-on-merger
+x-enrichment:
+  date: '2026-10-04'
+  status: enriched
+  artifacts_added: 22
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
