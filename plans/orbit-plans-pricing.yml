@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: Orbit Plans and Pricing
 description: Pricing plans for the Orbit community intelligence and developer relations platform. Orbit was acquired by Postman in April 2024 and its community features are being integrated into the Postman API Network.
 specificationVersion: '0.1'
@@ -41,3 +45,27 @@ plans:
       - Priority support
       - Custom reporting and data export
       - Multiple workspaces
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Starter
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Growth
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
