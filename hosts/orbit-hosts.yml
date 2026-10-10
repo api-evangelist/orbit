@@ -1,0 +1,125 @@
+generated: '2026-10-05'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 10
+  own: 5
+  other_domain: 0
+  platform: 5
+  roles:
+  - api
+  - docs
+  - other
+  - status
+  - website
+hosts:
+- host: api.archive.org
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: archive.org
+  role: api
+  relation: platform
+- host: api.orbit.love
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: orbit.love
+  role: api
+  relation: own
+- host: app.orbit.love
+  found_by:
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: orbit.love
+  role: other
+  relation: own
+- host: docs.orbit.love
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - Documentation
+  serves: []
+  registrable_domain: orbit.love
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - IssueTracker
+  - Releases
+  - CodeOfConduct
+  - ContributionGuide
+  - License
+  - GitHubOrg
+  serves: []
+  registrable_domain: github.com
+  role: other
+  relation: platform
+- host: orbit.love
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Blog
+  - Pricing
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: orbit.love
+  role: website
+  relation: own
+- host: status.orbit.love
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: orbit.love
+  role: status
+  relation: own
+- host: web.archive.org
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: archive.org
+  role: other
+  relation: platform
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: x.com
+  found_by:
+  - pointer
+  types:
+  - X
+  serves: []
+  registrable_domain: x.com
+  role: other
+  relation: platform

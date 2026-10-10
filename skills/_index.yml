@@ -1,0 +1,30 @@
+generated: '2026-10-04'
+method: generated
+generator: extract-docs-artifacts.py skills (local)
+source: openapi/orbit-activities-api-openapi.yml
+skills:
+- file: skills/orbit-create-member-activity.md
+  name: orbit-create-member-activity
+  api: openapi/orbit-activities-api-openapi.yml
+  operations:
+  - postByWorkspaceSlugMembersByMemberSlugActivities
+  - getByWorkspaceSlugMembersByMemberSlugActivities
+- file: skills/orbit-create-or-update-member-and-add-identity.md
+  name: orbit-create-or-update-member-and-add-identity
+  api: openapi/orbit-members-api-openapi.yml
+  operations:
+  - postByWorkspaceSlugMembers
+  - postByWorkspaceSlugMembersByMemberSlugIdentities
+- file: skills/orbit-notes-management.md
+  name: orbit-notes-management
+  api: openapi/orbit-notes-api-openapi.yml
+  operations:
+  - postByWorkspaceSlugMembersByMemberSlugNotes
+  - getByWorkspaceSlugMembersByMemberSlugNotes
+  - putByWorkspaceSlugMembersByMemberSlugNotesById
+- file: skills/orbit-create-webhook.md
+  name: orbit-create-webhook
+  api: openapi/orbit-webhooks-api-openapi.yml
+  operations:
+  - postByWorkspaceSlugWebhooks
+  - getByWorkspaceSlugWebhooksById

@@ -1,9 +1,6 @@
 name: Orbit
 
-description: Orbit is a developer relations and community intelligence platform that provides a RESTful API for tracking member activities, measuring
-  community growth, and managing developer advocates and contributors. The service offers endpoints for activities, members, organizations, notes,
-  reports, and webhooks, enabling integration of community data into internal tools and analytics pipelines. Orbit was acquired by Postman in
-  April 2024, after which the original platform was discontinued, but the API specifications remain available for legacy integrations.
+description: Orbit is a developer relations and community intelligence platform offering a comprehensive RESTful API that enables tracking of member activities, measuring community growth, and managing developer advocates and contributors. The service provides endpoints for activities, members, organizations, notes, reports, and webhooks, allowing seamless integration of community data into internal tools and analytics pipelines. Although Orbit was acquired by Postman in April 2024 and the original platform was discontinued, the API specifications continue to be maintained for legacy integrations, providing developers with reliable access to historical community data and ongoing support for existing implementations.
 
 deliveryModel:
   model: open-core
@@ -352,9 +349,3 @@ x-acquired: 2024
 x-status: defunct
 
 x-status-source: https://orbit.love/faq-on-merger
-x-enrichment:
-  date: '2026-10-04'
-  status: enriched
-  artifacts_added: 22
-  pass: modular-v1
-  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

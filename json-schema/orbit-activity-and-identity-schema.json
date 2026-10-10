@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/orbit/main/json-schema/orbit-activity-and-identity-schema.json",
+  "title": "activity_and_identity",
+  "x-generated": "2026-10-04",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/orbit-activities-api-openapi.yml#/components/schemas/activity_and_identity",
+  "type": "object",
+  "properties": {
+    "activity": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/activity_with_member"
+        },
+        {
+          "$ref": "#/$defs/post_activity_with_member"
+        }
+      ]
+    },
+    "identity": {
+      "$ref": "#/$defs/identity"
+    }
+  },
+  "$defs": {
+    "activity": {
+      "title": "Custom Activity",
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "A description of the activity; displayed in the timeline"
+        },
+        "link": {
+          "type": "string",
+          "description": "A URL for the activity; displayed in the timeline"
+        },
+        "link_text": {
+          "type": "string",
+          "description": "The text for the timeline link"
+        },
+        "title": {
+          "type": "string",
+          "description": "A title for the activity; displayed in the timeline"
+        },
+        "weight": {
+          "type": "string",
+          "description": "A custom weight to be used in filters and reports; defaults to 1."
+        },
+        "activity_type": {
+          "type": "string",
+          "description": "The type of activity - what action was done by the member. This is a legacy field, use activity_type_key instead."
+        },
+        "activity_type_key": {
+          "type": "string",
+          "description": "The key for a custom activity type for the workspace. Will create a new activity type if it does not exist."
+        },
+        "key": {
+          "type": "string",
+          "description": "Supply a key that must be unique or leave blank to have one generated."
+        },
+        "occurred_at": {
+          "type": "string",
+          "description": "The date and time the activity occurred; defaults to now"
+        },
+        "properties": {
+          "type": "object",
+          "description": "Key-value pairs to provide contextual metadata about an activity."
+        }
+      },
+      "required": [
+        "title"
+      ]
+    },
+    "activity_with_member": {
+      "title": "Custom Activity",
+      "allOf": [
+        {
+          "$ref": "#/$defs/activity"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "member": {
+              "$ref": "#/$defs/member"
+            }
+          }
+        }
+      ]
+    },
+    "identity": {
+      "type": "object",
+      "description": "Represents an email address, a profile on networks like github and twitter, or a record in another system.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the person in the source system"
+        },
+        "source": {
+          "type": "string",
+          "description": "The type of source: known values include github, twitter, discourse, email, linkedin, devto. Custom values can also be used"
+        },
+        "source_host": {
+          "type": "string",
+          "description": "Specifies the location of the source, such as the host of a Discourse instance"
+        },
+        "username": {
+          "type": "string",
+          "description": "The username of the person in the source system"
+        },
+        "uid": {
+          "type": "string",
+          "description": "The uid of the person in the source system"
+        },
+        "email": {
+          "type": "string",
+          "description": "The email of the person in the source system"
+        },
+        "url": {
+          "type": "string",
+          "description": "For custom identities, an optional link to the profile on the source system"
+        }
+      },
+      "required": [
+        "source"
+      ]
+    },
+    "member": {
+      "type": "object",
+      "properties": {
+        "bio": {
+          "type": "string"
+        },
+        "birthday": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pronouns": {
+          "type": "string"
+        },
+        "shipping_address": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "tags_to_add": {
+          "type": "string",
+          "description": "Adds tags to member; comma-separated string or array"
+        },
+        "tags": {
+          "type": "string",
+          "description": "Replaces all tags for the member; comma-separated string or array"
+        },
+        "tag_list": {
+          "type": "string",
+          "description": "Deprecated: Please use the tags attribute instead"
+        },
+        "tshirt": {
+          "type": "string"
+        },
+        "teammate": {
+          "type": "boolean"
+        },
+        "url": {
+          "type": "string"
+        },
+        "github": {
+          "type": "string",
+          "description": "The member's GitHub username"
+        },
+        "twitter": {
+          "type": "string",
+          "description": "The member's Twitter username"
+        },
+        "email": {
+          "type": "string",
+          "description": "The member's email"
+        },
+        "linkedin": {
+          "type": "string",
+          "description": "The member's LinkedIn username, without the in/ or pub/"
+        },
+        "devto": {
+          "type": "string",
+          "description": "The member's DEV username"
+        }
+      }
+    },
+    "post_activity": {
+      "title": "Content Activity",
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "The url representing the post"
+        },
+        "occurred_at": {
+          "type": "string",
+          "description": "The date and time at which the content was published; defaults to now"
+        },
+        "activity_type": {
+          "type": "string",
+          "enum": [
+            "content"
+          ]
+        }
+      },
+      "required": [
+        "url",
+        "activity_type"
+      ]
+    },
+    "post_activity_with_member": {
+      "title": "Content Activity",
+      "allOf": [
+        {
+          "$ref": "#/$defs/post_activity"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "member": {
+              "$ref": "#/$defs/member"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

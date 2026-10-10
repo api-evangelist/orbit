@@ -1,0 +1,72 @@
+generated: '2026-10-05'
+method: derived
+generator: derive-data-model.py
+source:
+- openapi/orbit-activities-api-openapi.yml
+- openapi/orbit-activity-types-api-openapi.yml
+- openapi/orbit-members-api-openapi.yml
+- openapi/orbit-notes-api-openapi.yml
+- openapi/orbit-organizations-api-openapi.yml
+- openapi/orbit-reports-api-openapi.yml
+- openapi/orbit-users-api-openapi.yml
+- openapi/orbit-webhooks-api-openapi.yml
+- openapi/orbit-workspaces-api-openapi.yml
+notation: has_one = property $ref; has_many = array of $ref; belongs_to = <entity>_id field
+summary:
+  entities: 11
+  entities_in_spec: 11
+  relationships: 7
+entities:
+- name: activity
+  fields: 10
+- name: activity_and_identity
+  fields: 2
+- name: activity_with_member
+  fields: 0
+- name: identity
+  fields: 7
+  description: Represents an email address, a profile on networks like github and twitter, or a record in another
+    system.
+- name: member
+  fields: 20
+- name: member_and_identity
+  fields: 2
+- name: note
+  fields: 1
+- name: organization
+  fields: 8
+- name: post_activity
+  fields: 3
+- name: post_activity_with_member
+  fields: 0
+- name: webhook_subscription
+  fields: 7
+relationships:
+- from: activity_and_identity
+  to: activity_with_member
+  type: has_one
+  via: activity
+- from: activity_and_identity
+  to: post_activity_with_member
+  type: has_one
+  via: activity
+- from: activity_and_identity
+  to: identity
+  type: has_one
+  via: identity
+- from: activity_with_member
+  to: member
+  type: has_one
+  via: member
+- from: post_activity_with_member
+  to: member
+  type: has_one
+  via: member
+- from: member_and_identity
+  to: member
+  type: has_one
+  via: member
+- from: member_and_identity
+  to: identity
+  type: has_one
+  via: identity
