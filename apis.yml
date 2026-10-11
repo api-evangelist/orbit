@@ -349,3 +349,17 @@ x-acquired: 2024
 x-status: defunct
 
 x-status-source: https://orbit.love/faq-on-merger
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's documentation pages return HTTP 530 errors and no OpenAPI spec is available on its own domains.
+  evidence:
+  - url: https://app.orbit.love/openapi.json
+    status: 301
+  checked: '2026-10-10'
+x-enrichment:
+  date: '2026-10-10'
+  status: nochange
+  artifacts_added: 0
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

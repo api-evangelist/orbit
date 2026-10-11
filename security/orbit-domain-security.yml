@@ -13,10 +13,7 @@ hosts:
   cert_expires: Dec 23 19:54:35 2026 GMT
   hsts: null
 - host: web.archive.org
-  https: true
-  tls_version: TLSv1.3
-  cert_expires: Feb  9 22:02:42 2027 GMT
-  hsts: false
+  https: false
 domains:
 - domain: orbit.love
   dnssec: false

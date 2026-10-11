@@ -1,4 +1,4 @@
-generated: '2026-10-05'
+generated: '2026-10-10'
 method: derived
 source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
 generator: derive-hosts.py

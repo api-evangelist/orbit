@@ -1,4 +1,4 @@
-generated: '2026-10-05'
+generated: '2026-10-10'
 method: derived
 generator: derive-data-model.py
 source:
@@ -42,6 +42,14 @@ entities:
 - name: webhook_subscription
   fields: 7
 relationships:
+- from: activity_with_member
+  to: member
+  type: has_one
+  via: member
+- from: post_activity_with_member
+  to: member
+  type: has_one
+  via: member
 - from: activity_and_identity
   to: activity_with_member
   type: has_one
@@ -54,14 +62,6 @@ relationships:
   to: identity
   type: has_one
   via: identity
-- from: activity_with_member
-  to: member
-  type: has_one
-  via: member
-- from: post_activity_with_member
-  to: member
-  type: has_one
-  via: member
 - from: member_and_identity
   to: member
   type: has_one
