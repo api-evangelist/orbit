@@ -115,7 +115,7 @@
     - connectors/applications/orbit
     vendor_link: https://orbit.love/
     builder: Fivetran
-  status: pending-generation
+  status: not-a-workflow
   arazzo: null
 - slug: orbit-meltano
   label: Meltano
@@ -144,5 +144,5 @@
     quality:
     - unknown
     builder: 'community (Meltano Hub variant maintainers: dbt-labs)'
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
