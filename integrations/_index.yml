@@ -146,3 +146,45 @@
     builder: Pipedream repo (component)
   status: not-a-workflow
   arazzo: null
+- slug: orbit-apis-guru-openapi-directory
+  label: APIs.guru OpenAPI Directory
+  partner: apis-guru
+  partner_name: APIs.guru OpenAPI Directory
+  category: API definition directory listing (OpenAPI)
+  type: register
+  channel: standard-directory
+  evidence: https://apis.guru/
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: APIs.guru OpenAPI Directory
+    spec_file: null
+    standard: APIs.guru OpenAPI Directory
+    role: listed-in-directory
+    directory_provider: orbit.love
+    matched_domain: orbit.love
+    matched_by: domain
+    apis_listed: 1
+    version_count: 1
+    first_added: '2021-05-29'
+    last_updated: '2023-03-06'
+    origin_publisher_hosted: true
+    origin_hosts:
+    - app.orbit.love
+    categories:
+    - customer_relation
+    own_openapi_files: 9
+    listings:
+    - key: orbit.love
+      title: Orbit API
+      preferred: v1
+      versions: 1
+      swagger_url: https://api.apis.guru/v2/specs/orbit.love/v1/openapi.json
+      origin_url: https://app.orbit.love/api-docs/v1/swagger.json
+      openapi_version: 3.0.1
+    signal_note: 'participation only: a community directory listing (APIs.guru collects definitions; the provider
+      did not file them). Signals: version_count, apis_listed, origin_publisher_hosted.'
+    detected_by: sweep-openapi-directory-apis-guru.py
+    detected: '2026-10-22'
+  status: not-a-workflow
+  arazzo: null
